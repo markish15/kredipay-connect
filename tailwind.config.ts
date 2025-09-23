@@ -13,7 +13,19 @@ export default {
       },
     },
     extend: {
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
+      },
       colors: {
+        /* KredibilityPay Brand Colors */
+        turquoise: "hsl(var(--turquoise))",
+        "turquoise-dark": "hsl(var(--turquoise-dark))",
+        "neutral-light": "hsl(var(--neutral-light))",
+        "neutral-mid": "hsl(var(--neutral-mid))",
+        "neutral-dark": "hsl(var(--neutral-dark))",
+        
+        /* System Colors */
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -57,6 +69,14 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+      },
+      backgroundImage: {
+        'gradient-hero': 'var(--gradient-hero)',
+        'gradient-section': 'var(--gradient-section)',
+      },
+      boxShadow: {
+        'soft': 'var(--shadow-soft)',
+        'card': 'var(--shadow-card)',
       },
       borderRadius: {
         lg: "var(--radius)",
