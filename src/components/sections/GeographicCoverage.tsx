@@ -1,8 +1,12 @@
+import { useState } from 'react';
+import { Link } from 'react-router-dom';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { MapPin, CreditCard } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { MapPin, ArrowRight } from 'lucide-react';
 
 const GeographicCoverage = () => {
+  const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
   const regions = [
     {
       name: 'Latinoamérica',
@@ -53,9 +57,18 @@ const GeographicCoverage = () => {
 
                 <div className="grid gap-4">
                   {region.countries.map((country, countryIndex) => (
-                    <div key={countryIndex} className="flex items-center justify-between p-4 bg-background/60 rounded-2xl">
+                    <div 
+                      key={countryIndex} 
+                      className={`flex items-center justify-between p-4 bg-background/60 rounded-2xl transition-all duration-300 cursor-pointer hover:bg-background/80 hover:scale-102 ${
+                        hoveredCountry === country.name ? 'ring-2 ring-primary shadow-lg' : ''
+                      }`}
+                      onMouseEnter={() => setHoveredCountry(country.name)}
+                      onMouseLeave={() => setHoveredCountry(null)}
+                    >
                       <div className="flex items-center space-x-3">
-                        <div className="w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center">
+                        <div className={`w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center transition-transform duration-300 ${
+                          hoveredCountry === country.name ? 'scale-110' : ''
+                        }`}>
                           <div className="w-4 h-4 bg-primary rounded-full"></div>
                         </div>
                         <span className="font-semibold text-foreground">{country.name}</span>
@@ -66,7 +79,7 @@ const GeographicCoverage = () => {
                           <Badge 
                             key={methodIndex} 
                             variant="secondary" 
-                            className="bg-primary/10 text-primary hover:bg-primary/20 text-xs"
+                            className="bg-primary/10 text-primary hover:bg-primary/20 text-xs transition-colors"
                           >
                             {method}
                           </Badge>
@@ -80,24 +93,13 @@ const GeographicCoverage = () => {
           ))}
         </div>
 
-        {/* Stats */}
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">30+</div>
-            <div className="text-muted-foreground">Países Activos</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">50+</div>
-            <div className="text-muted-foreground">Métodos de Pago</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">98%</div>
-            <div className="text-muted-foreground">Tasa Aceptación</div>
-          </div>
-          <div className="text-center">
-            <div className="text-4xl font-bold text-primary mb-2">24h</div>
-            <div className="text-muted-foreground">Liquidación</div>
-          </div>
+        {/* CTA to detailed page */}
+        <div className="text-center mt-12">
+          <Link to="/cobertura">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
+              Ver Cobertura Completa <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </div>
     </section>
