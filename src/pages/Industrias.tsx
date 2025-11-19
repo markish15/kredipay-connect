@@ -33,7 +33,7 @@ const Industrias = () => {
     {
       icon: TrendingUp,
       title: 'iFX & CFD Trading',
-      description: 'Infraestructura de pagos para brokers de forex, CFDs y criptomonedas.',
+      description: 'Infraestructura de pagos para brokers de forex y CFDs.',
       challenges: [
         'Depósitos instantáneos requeridos',
         'Retiros frecuentes y rápidos',
