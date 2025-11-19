@@ -11,21 +11,21 @@ const GeographicCoverage = () => {
     {
       name: 'Latinoamérica',
       countries: [
-        { name: 'Brasil', methods: ['Pix', 'Boleto'] },
-        { name: 'México', methods: ['SPEI', 'OXXO'] },
-        { name: 'Colombia', methods: ['PSE'] },
-        { name: 'Perú', methods: ['PagoEfectivo'] },
-        { name: 'Chile', methods: ['WebPay'] },
+        { name: 'Brasil', code: 'br', methods: ['Pix', 'Boleto'] },
+        { name: 'México', code: 'mx', methods: ['SPEI', 'OXXO'] },
+        { name: 'Colombia', code: 'co', methods: ['PSE'] },
+        { name: 'Perú', code: 'pe', methods: ['PagoEfectivo'] },
+        { name: 'Chile', code: 'cl', methods: ['WebPay'] },
       ]
     },
     {
       name: 'África',
       countries: [
-        { name: 'Kenia', methods: ['M-Pesa'] },
-        { name: 'Sudáfrica', methods: ['EFT'] },
-        { name: 'Nigeria', methods: ['Mobile Money'] },
-        { name: 'Ghana', methods: ['Mobile Money'] },
-        { name: 'Egipto', methods: ['Fawry'] },
+        { name: 'Kenia', code: 'ke', methods: ['M-Pesa'] },
+        { name: 'Sudáfrica', code: 'za', methods: ['EFT'] },
+        { name: 'Nigeria', code: 'ng', methods: ['Mobile Money'] },
+        { name: 'Ghana', code: 'gh', methods: ['Mobile Money'] },
+        { name: 'Egipto', code: 'eg', methods: ['Fawry'] },
       ]
     }
   ];
@@ -66,10 +66,14 @@ const GeographicCoverage = () => {
                       onMouseLeave={() => setHoveredCountry(null)}
                     >
                       <div className="flex items-center space-x-3">
-                        <div className={`w-8 h-8 bg-primary/20 rounded-full flex items-center justify-center transition-transform duration-300 ${
+                        <div className={`transition-transform duration-300 ${
                           hoveredCountry === country.name ? 'scale-110' : ''
                         }`}>
-                          <div className="w-4 h-4 bg-primary rounded-full"></div>
+                          <img 
+                            src={`https://flagcdn.com/w40/${country.code}.png`}
+                            alt={`Bandera de ${country.name}`}
+                            className="w-8 h-6 object-cover rounded shadow-sm"
+                          />
                         </div>
                         <span className="font-semibold text-foreground">{country.name}</span>
                       </div>
