@@ -3,6 +3,7 @@ import Header from '@/components/layout/Header';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { MapPin, CreditCard, Globe } from 'lucide-react';
+import PaymentMethodLogo from '@/components/PaymentMethodLogo';
 
 const Cobertura = () => {
   const [selectedCountry, setSelectedCountry] = useState<string | null>(null);
@@ -212,13 +213,12 @@ const Cobertura = () => {
                         </div>
                         <div className="flex flex-wrap gap-2">
                           {country.methods.map((method, methodIndex) => (
-                            <Badge 
+                            <div 
                               key={methodIndex} 
-                              variant="secondary" 
-                              className="bg-primary/10 text-primary hover:bg-primary/20 text-xs"
+                              className="bg-background/80 px-3 py-2 rounded-lg border border-border/50 hover:border-primary/50 transition-colors"
                             >
-                              {method}
-                            </Badge>
+                              <PaymentMethodLogo method={method} className="h-6" />
+                            </div>
                           ))}
                         </div>
                       </div>
