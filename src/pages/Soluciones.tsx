@@ -126,7 +126,7 @@ const Soluciones = () => {
                     <div className="grid grid-cols-1 gap-6">
                       {solution.metrics.map((metric, idx) => (
                         <div key={idx} className="text-center p-6 bg-background/60 rounded-2xl">
-                          <div className="text-4xl font-bold text-primary mb-2">{metric.value}</div>
+                          <div className="text-4xl font-bold mb-2" style={{ color: '#0A4D5E' }}>{metric.value}</div>
                           <div className="text-sm text-muted-foreground">{metric.label}</div>
                         </div>
                       ))}
