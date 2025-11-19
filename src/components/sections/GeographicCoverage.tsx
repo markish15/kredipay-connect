@@ -4,6 +4,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { MapPin, ArrowRight } from 'lucide-react';
+import PaymentMethodLogo from '@/components/PaymentMethodLogo';
 
 const GeographicCoverage = () => {
   const [hoveredCountry, setHoveredCountry] = useState<string | null>(null);
@@ -80,13 +81,12 @@ const GeographicCoverage = () => {
                       
                       <div className="flex flex-wrap gap-2">
                         {country.methods.map((method, methodIndex) => (
-                          <Badge 
+                          <div 
                             key={methodIndex} 
-                            variant="secondary" 
-                            className="bg-primary/10 text-primary hover:bg-primary/20 text-xs transition-colors"
+                            className="bg-background/80 px-3 py-2 rounded-lg border border-border/50 hover:border-primary/50 transition-colors"
                           >
-                            {method}
-                          </Badge>
+                            <PaymentMethodLogo method={method} className="h-5" />
+                          </div>
                         ))}
                       </div>
                     </div>
