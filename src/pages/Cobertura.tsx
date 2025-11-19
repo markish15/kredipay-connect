@@ -190,9 +190,11 @@ const Cobertura = () => {
                     >
                       <div className="flex items-center justify-between mb-4">
                         <div className="flex items-center space-x-3">
-                          <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center">
-                            <div className="w-5 h-5 bg-primary rounded-full"></div>
-                          </div>
+                          <img 
+                            src={`https://flagcdn.com/w80/${country.code.toLowerCase()}.png`}
+                            alt={`Bandera de ${country.name}`}
+                            className="w-12 h-9 object-cover rounded shadow-md"
+                          />
                           <h3 className="text-lg font-bold text-foreground">{country.name}</h3>
                         </div>
                         <Badge variant="outline" className="text-xs">
