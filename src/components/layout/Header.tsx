@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
-import logoImage from '@/assets/kredibilitypay-logo.svg';
+import kIcon from '@/assets/kredibilitypay-k-icon.png';
 
 const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,12 +21,17 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center space-x-2">
-              <img 
-                src={logoImage} 
-                alt="KredibilityPay" 
-                className="h-12 w-auto"
+            <Link to="/" className="flex items-center gap-2">
+              <img
+                src={kIcon}
+                alt="KredibilityPay"
+                className="h-7 w-7 object-contain"
+                loading="eager"
               />
+              <span className="text-sm font-medium leading-none">
+                <span className="text-primary">Kredibility</span>
+                <span className="text-foreground">Pay</span>
+              </span>
             </Link>
           </div>
 
