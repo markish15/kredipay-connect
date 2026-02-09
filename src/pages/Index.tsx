@@ -1,8 +1,8 @@
 import Header from '@/components/layout/Header';
 import Hero from '@/components/sections/Hero';
-import ValueProposition from '@/components/sections/ValueProposition';
-import GeographicCoverage from '@/components/sections/GeographicCoverage';
-import BusinessModel from '@/components/sections/BusinessModel';
+import PaymentMethods from '@/components/sections/PaymentMethods';
+import CoverageMap from '@/components/sections/CoverageMap';
+import HomeCTA from '@/components/sections/HomeCTA';
 
 const Index = () => {
   return (
@@ -10,9 +10,9 @@ const Index = () => {
       <Header />
       <main>
         <Hero />
-        <ValueProposition />
-        <GeographicCoverage />
-        <BusinessModel />
+        <PaymentMethods />
+        <CoverageMap />
+        <HomeCTA />
       </main>
     </div>
   );

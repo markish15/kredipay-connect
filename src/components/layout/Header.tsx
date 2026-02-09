@@ -9,10 +9,9 @@ const Header = () => {
 
   const navigation = [
     { name: 'Soluciones', href: '/soluciones' },
-    { name: 'Industrias', href: '/industrias' },
-    { name: 'Cobertura', href: '/cobertura' },
-    { name: 'Desarrolladores', href: '/desarrolladores' },
-    { name: 'Sobre Nosotros', href: '/nosotros' },
+    { name: 'Mercados', href: '/mercados' },
+    { name: 'Nosotros', href: '/nosotros' },
+    { name: 'Contáctanos', href: '/contacto' },
   ];
 
   return (
