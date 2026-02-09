@@ -25,9 +25,9 @@ const Hero = () => {
 
           {/* Body */}
           <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Rompe el molde, simplifica los pagos globales y llega a millones de clientes 
-            con nuestra solución integral de pagos. Expándete en LatAm sin esfuerzo con una 
-            sola integración, 300+ métodos de pago locales, y una amplia variedad de divisas.
+            Simplifica los pagos globales y llega a millones de clientes 
+            con una sola integración, 300+ métodos de pago locales en LatAm, 
+            y una amplia variedad de divisas. Todo sin esfuerzo.
           </p>
 
           {/* CTAs */}
