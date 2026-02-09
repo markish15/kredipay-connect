@@ -19,8 +19,8 @@ const Hero = () => {
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight">
-            Pagos sin fronteras,{' '}
-            <span className="text-primary">sin complicaciones</span>
+            De lo local a lo global,{' '}
+            <span className="text-primary">sin fricción</span>
           </h1>
 
           {/* Body */}
