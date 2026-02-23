@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import teamPhoto from '@/assets/team-photo.jpg';
+
 
 const Nosotros = () => {
   const stats = [
@@ -158,14 +158,6 @@ const Nosotros = () => {
                   <strong className="text-foreground">Una sola integración. Todos los métodos. Todos los mercados.</strong>
                 </p>
               </div>
-            </div>
-            <div className="relative">
-              <img
-                src={teamPhoto}
-                alt="Equipo KredibilityPay"
-                className="rounded-3xl shadow-card w-full object-cover"
-                loading="lazy"
-              />
             </div>
           </div>
         </div>
