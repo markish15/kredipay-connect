@@ -1,39 +1,95 @@
 import Header from '@/components/layout/Header';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Target, History, Users, MapPin, Award, TrendingUp } from 'lucide-react';
+import { Button } from '@/components/ui/button';
+import { Link } from 'react-router-dom';
+import {
+  Target, Users, TrendingUp, Award, MapPin,
+  Shield, Heart, Zap, ArrowRight, ChevronDown
+} from 'lucide-react';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import teamPhoto from '@/assets/team-photo.jpg';
 
 const Nosotros = () => {
+  const stats = [
+    { value: '50K+', label: 'Merchants Activos' },
+    { value: '$2B+', label: 'Procesado Anualmente' },
+    { value: '30+', label: 'Países' },
+    { value: '150+', label: 'Empleados' }
+  ];
+
   const values = [
     {
       icon: Target,
       title: 'Transparencia',
-      description: 'Precios claros, sin costos ocultos. Reportes en tiempo real.'
+      description: 'Precios claros, sin costos ocultos. Reportes en tiempo real para que siempre sepas dónde estás.'
+    },
+    {
+      icon: Shield,
+      title: 'Seguridad',
+      description: 'Certificaciones PCI DSS Level 1, KYC/AML. La seguridad de tus fondos es nuestra prioridad #1.'
+    },
+    {
+      icon: Heart,
+      title: 'Soporte Humano',
+      description: 'Equipo disponible 24/7. Respuesta en minutos, no en días. Cada merchant importa.'
+    },
+    {
+      icon: Zap,
+      title: 'Innovación',
+      description: 'Tecnología de punta para maximizar aprobación, reducir fraude y optimizar costos.'
     },
     {
       icon: Users,
-      title: 'Soporte Humano',
-      description: 'Equipo disponible 24/7. Respuesta en minutos, no en días.'
-    },
-    {
-      icon: TrendingUp,
-      title: 'Innovación',
-      description: 'Tecnología de punta para maximizar aprobación y reducir costos.'
+      title: 'Inclusión',
+      description: 'Democratizamos el acceso a pagos digitales para poblaciones sub-bancarizadas en mercados emergentes.'
     },
     {
       icon: Award,
-      title: 'Compliance',
-      description: 'Certificaciones PCI DSS, KYC/AML. Seguridad sin concesiones.'
+      title: 'Ética',
+      description: 'Compliance primero. Operamos bajo los estándares regulatorios más estrictos de cada mercado.'
     }
   ];
 
-  const milestones = [
-    { year: '2018', event: 'Fundación en São Paulo', description: 'Inicio de operaciones en Brasil con Pix y Boleto' },
-    { year: '2019', event: 'Expansión LatAm', description: 'Lanzamiento en México, Colombia, Chile y Perú' },
-    { year: '2021', event: '10K+ Merchants', description: 'Alcanzamos 10,000 comercios activos en la región' },
-    { year: '2023', event: 'Entrada a África', description: 'Operaciones en Kenia, Sudáfrica y Nigeria' },
-    { year: '2024', event: 'Series B', description: 'US$50M en financiamiento para expansión global' },
-    { year: '2025', event: 'Presente', description: '30+ países, 50K+ merchants, $2B+ procesados/año' }
+  const team = [
+    { name: 'Carlos Mendoza', role: 'CEO & Co-founder', bg: 'Fintech · ex-Stripe · Stanford MBA' },
+    { name: 'Ana Lucía Reyes', role: 'CTO', bg: 'Ingeniería · ex-MercadoPago · MIT' },
+    { name: 'Ricardo Ferreira', role: 'COO', bg: 'Operaciones · ex-dLocal · INSEAD' },
+    { name: 'María José Ochoa', role: 'VP Sales', bg: 'Ventas Enterprise · ex-Adyen · Wharton' },
+    { name: 'David Nakamura', role: 'VP Engineering', bg: 'Sistemas distribuidos · ex-Nubank' },
+    { name: 'Valentina Cruz', role: 'Head of Compliance', bg: 'Regulación financiera · ex-Visa' }
+  ];
+
+  const faqs = [
+    {
+      question: '¿Qué es KredibilityPay?',
+      answer: 'KredibilityPay es una pasarela de pagos especializada en mercados emergentes. Ofrecemos una sola API para integrar 300+ métodos de pago locales en LatAm y África, permitiendo a empresas globales cobrar y pagar de forma simple y segura.'
+    },
+    {
+      question: '¿En qué países operan?',
+      answer: 'Operamos en más de 30 países, con presencia fuerte en Brasil, México, Colombia, Chile, Perú, Argentina, y mercados clave de África como Kenia, Sudáfrica y Nigeria.'
+    },
+    {
+      question: '¿Cuánto tarda la integración?',
+      answer: 'La integración básica puede completarse en 1-2 días con nuestros SDKs y documentación. Para integraciones enterprise más complejas, nuestro equipo técnico te acompaña en cada paso.'
+    },
+    {
+      question: '¿Qué métodos de pago soportan?',
+      answer: 'Soportamos más de 300 métodos incluyendo Pix, OXXO, PSE, SPEI, Boleto, Yape, MercadoPago, transferencias bancarias locales, tarjetas locales e internacionales, billeteras digitales y pagos en efectivo.'
+    },
+    {
+      question: '¿Cómo manejan el compliance y regulación?',
+      answer: 'Estamos certificados PCI DSS Level 1, cumplimos con KYC/AML en cada jurisdicción, y tenemos licencias locales donde se requiere. Nuestro equipo de compliance monitorea regulaciones continuamente.'
+    },
+    {
+      question: '¿Ofrecen pay-outs además de pay-ins?',
+      answer: 'Sí. Nuestra plataforma soporta pay-ins (cobros) y pay-outs (desembolsos) con la misma API. Puedes pagar a proveedores, afiliados o realizar reembolsos en moneda local.'
+    }
   ];
 
   const offices = [
@@ -43,28 +99,22 @@ const Nosotros = () => {
     { city: 'Miami', country: 'USA', type: 'Sales' }
   ];
 
-  const stats = [
-    { value: '50K+', label: 'Merchants Activos' },
-    { value: '$2B+', label: 'Procesado Anualmente' },
-    { value: '30+', label: 'Países' },
-    { value: '150+', label: 'Empleados' }
-  ];
-
   return (
     <div className="min-h-screen bg-background">
       <Header />
-      
-      {/* Hero Section */}
+
+      {/* Hero */}
       <section className="relative py-24 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <h1 className="text-5xl lg:text-6xl font-bold text-foreground mb-6">
-              Sobre <span className="text-primary">KredibilityPay</span>
+            <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
+              El puente entre tu negocio y{' '}
+              <span className="text-primary">mercados emergentes</span>
             </h1>
-            <p className="text-xl text-muted-foreground leading-relaxed">
-              Somos el puente entre negocios globales y mercados locales.
-              Desde 2018, democratizamos el acceso a pagos en mercados emergentes.
+            <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Nacimos con una misión clara: eliminar la fricción de los pagos 
+              en las economías con mayor potencial de crecimiento del mundo.
             </p>
           </div>
         </div>
@@ -84,16 +134,38 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Mission */}
+      {/* Why a payment gateway */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto">
-            <div className="text-center mb-12">
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">Nuestra Misión</h2>
-              <p className="text-xl text-muted-foreground leading-relaxed">
-                Empoderar a empresas de todos los tamaños con pagos eficientes, seguros y rentables.
-                Eliminamos barreras financieras y brindamos herramientas tecnológicas locales que permiten competir globalmente.
-              </p>
+          <div className="grid lg:grid-cols-2 gap-16 items-center">
+            <div>
+              <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">
+                Nuestra razón de ser
+              </Badge>
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+                ¿Por qué una pasarela de pagos para mercados emergentes?
+              </h2>
+              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+                <p>
+                  Los mercados emergentes representan el 85% del crecimiento global en eCommerce, 
+                  pero sus sistemas de pago son fragmentados, locales y complejos.
+                </p>
+                <p>
+                  Las empresas globales pierden hasta el 60% de sus conversiones al no ofrecer 
+                  métodos de pago locales. Nosotros eliminamos esa barrera.
+                </p>
+                <p>
+                  <strong className="text-foreground">Una sola integración. Todos los métodos. Todos los mercados.</strong>
+                </p>
+              </div>
+            </div>
+            <div className="relative">
+              <img
+                src={teamPhoto}
+                alt="Equipo KredibilityPay"
+                className="rounded-3xl shadow-card w-full object-cover"
+                loading="lazy"
+              />
             </div>
           </div>
         </div>
@@ -102,103 +174,119 @@ const Nosotros = () => {
       {/* Values */}
       <section className="py-20 bg-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Nuestros Valores</h2>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Nuestros Valores
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Los principios que guían cada decisión y cada línea de código.
+            </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {values.map((value, index) => (
-              <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-2 rounded-2xl text-center hover:scale-105 transition-transform">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-primary/10 rounded-2xl mb-4">
-                  <value.icon className="h-8 w-8 text-primary" />
+              <Card key={index} className="p-8 bg-card/50 backdrop-blur-sm border-2 rounded-2xl hover:border-primary/30 transition-all group">
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-4 group-hover:bg-primary/20 transition-colors">
+                  <value.icon className="h-7 w-7 text-primary" />
                 </div>
                 <h3 className="text-xl font-bold text-foreground mb-2">{value.title}</h3>
-                <p className="text-sm text-muted-foreground">{value.description}</p>
+                <p className="text-sm text-muted-foreground leading-relaxed">{value.description}</p>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* History */}
+      {/* Team */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">Nuestra Historia</h2>
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+              Nuestro Equipo
+            </h2>
             <p className="text-lg text-muted-foreground">
-              Desde nuestro origen en LATAM, evolucionamos hasta convertirnos en un referente en pagos para sectores high-risk.
+              Liderazgo con experiencia en las fintech más grandes del mundo.
             </p>
           </div>
 
-          <div className="max-w-4xl mx-auto">
-            <div className="relative">
-              {/* Timeline line */}
-              <div className="absolute left-8 top-0 bottom-0 w-0.5 bg-primary/20 hidden md:block" />
-              
-              <div className="space-y-8">
-                {milestones.map((milestone, index) => (
-                  <div key={index} className="relative flex gap-8">
-                    {/* Year badge */}
-                    <div className="flex-shrink-0 w-16 md:w-20">
-                      <Badge className="bg-primary text-primary-foreground w-full justify-center">
-                        {milestone.year}
-                      </Badge>
-                    </div>
-
-                    {/* Content */}
-                    <Card className="flex-grow p-6 bg-card/50 backdrop-blur-sm border-2 rounded-2xl">
-                      <h3 className="text-lg font-bold text-foreground mb-2">{milestone.event}</h3>
-                      <p className="text-sm text-muted-foreground">{milestone.description}</p>
-                    </Card>
-                  </div>
-                ))}
-              </div>
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+            {team.map((member, index) => (
+              <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-2 rounded-2xl text-center hover:shadow-card transition-all">
+                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                  <span className="text-2xl font-bold text-primary">
+                    {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
+                  </span>
+                </div>
+                <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
+                <Badge className="bg-primary/10 text-primary border-0 mb-2">{member.role}</Badge>
+                <p className="text-xs text-muted-foreground">{member.bg}</p>
+              </Card>
+            ))}
           </div>
         </div>
       </section>
 
       {/* Offices */}
-      <section className="py-20 bg-primary/5">
+      <section className="py-16 bg-primary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Presencia Global
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Oficinas estratégicamente ubicadas para servir mejor a nuestros clientes.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
+          <h3 className="text-2xl font-bold text-foreground text-center mb-8">Presencia Global</h3>
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {offices.map((office, index) => (
-              <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-2 rounded-2xl text-center hover:scale-105 transition-transform">
-                <MapPin className="h-10 w-10 text-primary mx-auto mb-3" />
-                <h3 className="text-lg font-bold text-foreground mb-1">{office.city}</h3>
-                <p className="text-sm text-muted-foreground mb-2">{office.country}</p>
-                <Badge variant="secondary" className="bg-primary/10 text-primary">
-                  {office.type}
-                </Badge>
+              <Card key={index} className="p-5 bg-card/50 backdrop-blur-sm border-2 rounded-2xl text-center">
+                <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
+                <h4 className="font-bold text-foreground">{office.city}</h4>
+                <p className="text-xs text-muted-foreground">{office.country}</p>
+                <Badge variant="secondary" className="mt-2 bg-primary/10 text-primary text-xs">{office.type}</Badge>
               </Card>
             ))}
           </div>
         </div>
       </section>
 
-      {/* CTA */}
+      {/* FAQs */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-3xl mx-auto text-center">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-              ¿Listo para trabajar juntos?
-            </h2>
-            <p className="text-lg text-muted-foreground mb-8">
-              Únete a miles de empresas que confían en KredibilityPay para sus pagos.
-            </p>
-            <button className="px-8 py-4 bg-primary text-primary-foreground rounded-lg font-semibold hover:bg-primary/90 transition-colors">
-              Solicitar Demo
-            </button>
+          <div className="max-w-3xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
+                Preguntas Frecuentes
+              </h2>
+            </div>
+
+            <Accordion type="single" collapsible className="space-y-4">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`faq-${index}`} className="border-2 rounded-2xl px-6 bg-card/50">
+                  <AccordionTrigger className="text-left font-semibold text-foreground hover:text-primary">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground leading-relaxed">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
           </div>
+        </div>
+      </section>
+
+      {/* CTA */}
+      <section className="py-24 bg-gradient-to-r from-primary/10 via-secondary/10 to-primary/10">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
+            ¿Listo para trabajar <span className="text-primary">juntos</span>?
+          </h2>
+          <p className="text-xl text-muted-foreground max-w-2xl mx-auto mb-10 leading-relaxed">
+            Únete a miles de empresas que confían en KredibilityPay para sus pagos en mercados emergentes.
+          </p>
+          <Link to="/contacto">
+            <Button
+              size="lg"
+              className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-12 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all"
+            >
+              Contáctanos
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
+          </Link>
         </div>
       </section>
     </div>
