@@ -4,8 +4,8 @@ import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import {
-  Target, Users, TrendingUp, Award, MapPin,
-  Shield, Heart, Zap, ArrowRight, ChevronDown
+  Target, Users, TrendingUp, Award,
+  Shield, Heart, Zap, ArrowRight
 } from 'lucide-react';
 import {
   Accordion,
@@ -84,12 +84,6 @@ const Nosotros = () => {
     }
   ];
 
-  const offices = [
-    { city: 'São Paulo', country: 'Brasil', type: 'HQ' },
-    { city: 'Ciudad de México', country: 'México', type: 'Regional' },
-    { city: 'Nairobi', country: 'Kenia', type: 'Regional' },
-    { city: 'Miami', country: 'USA', type: 'Sales' }
-  ];
 
   return (
     <div className="min-h-screen bg-background">
@@ -185,22 +179,6 @@ const Nosotros = () => {
       </section>
 
 
-      {/* Offices */}
-      <section className="py-16 bg-primary/5">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <h3 className="text-2xl font-bold text-foreground text-center mb-8">Presencia Global</h3>
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 max-w-4xl mx-auto">
-            {offices.map((office, index) => (
-              <Card key={index} className="p-5 bg-card/50 backdrop-blur-sm border-2 rounded-2xl text-center">
-                <MapPin className="h-8 w-8 text-primary mx-auto mb-2" />
-                <h4 className="font-bold text-foreground">{office.city}</h4>
-                <p className="text-xs text-muted-foreground">{office.country}</p>
-                <Badge variant="secondary" className="mt-2 bg-primary/10 text-primary text-xs">{office.type}</Badge>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* FAQs */}
       <section className="py-20">
