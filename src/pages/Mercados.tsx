@@ -123,8 +123,7 @@ const Mercados = () => {
               Mercados LatAm
             </p>
             <h1 className="text-4xl lg:text-6xl font-bold text-card mb-6 leading-tight">
-              La oportunidad más grande del{' '}
-              <span className="text-card">comercio digital</span>
+              La <span className="text-primary">oportunidad</span> más grande del comercio digital
             </h1>
             <p className="text-xl text-card/80 max-w-2xl mx-auto leading-relaxed">
               500 millones de consumidores conectados, un mercado de $160B en eCommerce, 
