@@ -3,97 +3,111 @@ import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
 
 import argentinaImg from '@/assets/carousel-argentina.jpg';
+import boliviaImg from '@/assets/carousel-bolivia.jpg';
 import brasilImg from '@/assets/carousel-brasil.jpg';
 import chileImg from '@/assets/carousel-chile.jpg';
 import colombiaImg from '@/assets/carousel-colombia.jpg';
+import costaricaImg from '@/assets/carousel-costarica.jpg';
+import dominicanaImg from '@/assets/carousel-dominicana.jpg';
+import ecuadorImg from '@/assets/carousel-ecuador.jpg';
+import elsalvadorImg from '@/assets/carousel-elsalvador.jpg';
+import guatemalaImg from '@/assets/carousel-guatemala.jpg';
 import mexicoImg from '@/assets/carousel-mexico.jpg';
+import panamaImg from '@/assets/carousel-panama.jpg';
+import paraguayImg from '@/assets/carousel-paraguay.jpg';
 import peruImg from '@/assets/carousel-peru.jpg';
 import uruguayImg from '@/assets/carousel-uruguay.jpg';
 
 const countrySlides = [
   {
-    name: 'Brasil',
-    flag: '🇧🇷',
-    image: brasilImg,
-    stats: [
-      { value: '$49B', label: 'eCommerce' },
-      { value: '215M', label: 'Población' },
-      { value: '#1', label: 'Mercado LatAm' },
-    ],
+    name: 'Brasil', flag: '🇧🇷', image: brasilImg,
+    stats: [{ value: '$49B', label: 'eCommerce' }, { value: '215M', label: 'Población' }, { value: '#1', label: 'Mercado LatAm' }],
     methods: ['Pix', 'Boleto', 'Tarjetas locales'],
     insight: 'Pix procesa +$250B/mes. Mercado #1 en LatAm.',
   },
   {
-    name: 'México',
-    flag: '🇲🇽',
-    image: mexicoImg,
-    stats: [
-      { value: '$37B', label: 'eCommerce' },
-      { value: '22K+', label: 'Sucursales OXXO' },
-      { value: '+40%', label: 'Crecimiento SPEI' },
-    ],
+    name: 'México', flag: '🇲🇽', image: mexicoImg,
+    stats: [{ value: '$37B', label: 'eCommerce' }, { value: '22K+', label: 'Sucursales OXXO' }, { value: '+40%', label: 'Crec. SPEI' }],
     methods: ['OXXO', 'SPEI', 'Tarjetas locales'],
     insight: 'OXXO tiene 22K+ sucursales. SPEI crece 40% anual.',
   },
   {
-    name: 'Colombia',
-    flag: '🇨🇴',
-    image: colombiaImg,
-    stats: [
-      { value: '$14B', label: 'eCommerce' },
-      { value: '85%', label: 'Penetración PSE' },
-      { value: '52M', label: 'Población' },
-    ],
+    name: 'Colombia', flag: '🇨🇴', image: colombiaImg,
+    stats: [{ value: '$14B', label: 'eCommerce' }, { value: '85%', label: 'Penetración PSE' }, { value: '52M', label: 'Población' }],
     methods: ['PSE', 'Efecty', 'Nequi'],
-    insight: 'PSE domina pagos online con 85% de penetración bancaria digital.',
+    insight: 'PSE domina pagos online con 85% de penetración digital.',
   },
   {
-    name: 'Argentina',
-    flag: '🇦🇷',
-    image: argentinaImg,
-    stats: [
-      { value: '$15B', label: 'eCommerce' },
-      { value: '40M+', label: 'Wallets activas' },
-      { value: '46M', label: 'Población' },
-    ],
+    name: 'Argentina', flag: '🇦🇷', image: argentinaImg,
+    stats: [{ value: '$15B', label: 'eCommerce' }, { value: '40M+', label: 'Wallets' }, { value: '46M', label: 'Población' }],
     methods: ['MercadoPago', 'Rapipago', 'PagoFácil'],
     insight: 'MercadoPago lidera fintech con +40M de wallets activas.',
   },
   {
-    name: 'Chile',
-    flag: '🇨🇱',
-    image: chileImg,
-    stats: [
-      { value: '$12B', label: 'eCommerce' },
-      { value: '87%', label: 'Bancarización' },
-      { value: '19M', label: 'Población' },
-    ],
+    name: 'Chile', flag: '🇨🇱', image: chileImg,
+    stats: [{ value: '$12B', label: 'eCommerce' }, { value: '87%', label: 'Bancarización' }, { value: '19M', label: 'Población' }],
     methods: ['Webpay', 'Khipu', 'ServiPag'],
     insight: 'Mayor penetración bancaria de LatAm con 87%.',
   },
   {
-    name: 'Perú',
-    flag: '🇵🇪',
-    image: peruImg,
-    stats: [
-      { value: '$8B', label: 'eCommerce' },
-      { value: '15M+', label: 'Usuarios Yape' },
-      { value: '34M', label: 'Población' },
-    ],
+    name: 'Perú', flag: '🇵🇪', image: peruImg,
+    stats: [{ value: '$8B', label: 'eCommerce' }, { value: '15M+', label: 'Usuarios Yape' }, { value: '34M', label: 'Población' }],
     methods: ['Yape', 'PagoEfectivo', 'Transferencia'],
     insight: 'Yape: +15M de usuarios activos. Billetera #1.',
   },
   {
-    name: 'Uruguay',
-    flag: '🇺🇾',
-    image: uruguayImg,
-    stats: [
-      { value: '$1.2B', label: 'eCommerce' },
-      { value: '74%', label: 'Inclusión financiera' },
-      { value: '+25%', label: 'Crecimiento digital' },
-    ],
+    name: 'Ecuador', flag: '🇪🇨', image: ecuadorImg,
+    stats: [{ value: '$3.5B', label: 'eCommerce' }, { value: '18M', label: 'Población' }, { value: '+22%', label: 'Crec. digital' }],
+    methods: ['Transferencia', 'Efectivo', 'Tarjetas locales'],
+    insight: 'Economía dolarizada con rápida adopción de pagos digitales.',
+  },
+  {
+    name: 'Uruguay', flag: '🇺🇾', image: uruguayImg,
+    stats: [{ value: '$1.2B', label: 'eCommerce' }, { value: '74%', label: 'Inclusión fin.' }, { value: '+25%', label: 'Crec. digital' }],
     methods: ['Abitab', 'RedPagos', 'Tarjetas locales'],
     insight: 'Líder en inclusión financiera digital del Cono Sur.',
+  },
+  {
+    name: 'Paraguay', flag: '🇵🇾', image: paraguayImg,
+    stats: [{ value: '$1B', label: 'eCommerce' }, { value: '7.4M', label: 'Población' }, { value: '+30%', label: 'Crec. digital' }],
+    methods: ['Transferencia', 'Giros Tigo', 'Tarjetas locales'],
+    insight: 'Billeteras móviles creciendo +30% año tras año.',
+  },
+  {
+    name: 'Bolivia', flag: '🇧🇴', image: boliviaImg,
+    stats: [{ value: '$0.8B', label: 'eCommerce' }, { value: '12M', label: 'Población' }, { value: '+35%', label: 'Crec. digital' }],
+    methods: ['QR Simple', 'Transferencia', 'Tigo Money'],
+    insight: 'QR Simple impulsa la inclusión financiera digital.',
+  },
+  {
+    name: 'Costa Rica', flag: '🇨🇷', image: costaricaImg,
+    stats: [{ value: '$2B', label: 'eCommerce' }, { value: '5.2M', label: 'Población' }, { value: '68%', label: 'Bancarización' }],
+    methods: ['SINPE Móvil', 'Transferencia', 'Tarjetas locales'],
+    insight: 'SINPE Móvil revoluciona pagos P2P en el país.',
+  },
+  {
+    name: 'Panamá', flag: '🇵🇦', image: panamaImg,
+    stats: [{ value: '$2.5B', label: 'eCommerce' }, { value: '4.4M', label: 'Población' }, { value: '+20%', label: 'Crec. digital' }],
+    methods: ['Yappy', 'Transferencia', 'Tarjetas locales'],
+    insight: 'Yappy domina pagos móviles con adopción masiva.',
+  },
+  {
+    name: 'Guatemala', flag: '🇬🇹', image: guatemalaImg,
+    stats: [{ value: '$1.5B', label: 'eCommerce' }, { value: '17M', label: 'Población' }, { value: '+28%', label: 'Crec. digital' }],
+    methods: ['Transferencia', 'Efectivo', 'Tarjetas locales'],
+    insight: 'Mercado en expansión con fuerte adopción móvil.',
+  },
+  {
+    name: 'Rep. Dominicana', flag: '🇩🇴', image: dominicanaImg,
+    stats: [{ value: '$2B', label: 'eCommerce' }, { value: '11M', label: 'Población' }, { value: '+24%', label: 'Crec. digital' }],
+    methods: ['Transferencia', 'Tarjetas locales', 'Efectivo'],
+    insight: 'Líder del Caribe en comercio electrónico.',
+  },
+  {
+    name: 'El Salvador', flag: '🇸🇻', image: elsalvadorImg,
+    stats: [{ value: '$0.9B', label: 'eCommerce' }, { value: '6.5M', label: 'Población' }, { value: '+32%', label: 'Crec. digital' }],
+    methods: ['Transferencia', 'Chivo Wallet', 'Efectivo'],
+    insight: 'Pionero en adopción de pagos digitales en Centroamérica.',
   },
 ];
 
@@ -107,7 +121,7 @@ const CountryCarousel = () => {
 
   useEffect(() => {
     if (isPaused) return;
-    const interval = setInterval(next, 5000);
+    const interval = setInterval(next, 4000);
     return () => clearInterval(interval);
   }, [isPaused, next]);
 
@@ -143,7 +157,7 @@ const CountryCarousel = () => {
           <span className="text-lg font-bold text-foreground">{slide.name}</span>
         </div>
 
-        {/* Insight text overlay */}
+        {/* Insight text */}
         <div className="absolute bottom-20 left-5 right-5 lg:bottom-24">
           <p className="text-sm text-card/90 italic drop-shadow-md">{slide.insight}</p>
         </div>
@@ -171,14 +185,14 @@ const CountryCarousel = () => {
             </Badge>
           ))}
         </div>
-        <div className="flex gap-1.5">
+        <div className="flex gap-1">
           {countrySlides.map((s, i) => (
             <button
               key={s.name}
               onClick={() => setActive(i)}
               className={cn(
-                'h-2.5 rounded-full transition-all duration-300',
-                i === active ? 'bg-primary w-6' : 'bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2.5'
+                'h-2 rounded-full transition-all duration-300',
+                i === active ? 'bg-primary w-5' : 'bg-muted-foreground/30 hover:bg-muted-foreground/50 w-2'
               )}
               aria-label={`Ver ${s.name}`}
             />
