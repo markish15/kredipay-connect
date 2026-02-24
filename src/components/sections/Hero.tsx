@@ -24,7 +24,7 @@ const Hero = () => {
           </h1>
 
           {/* Body */}
-          <p className="text-base md:text-lg lg:text-xl leading-relaxed text-muted-foreground max-w-5xl mx-auto">
+          <p className="text-base md:text-lg lg:text-xl leading-relaxed text-foreground/70 max-w-5xl mx-auto">
             Simplifica los pagos globales y llega a millones de clientes con una sola integración, múltiples métodos de pago locales en LatAm, y una amplia variedad de divisas. Todo sin esfuerzo.
           </p>
 
