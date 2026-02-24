@@ -8,7 +8,7 @@ import {
   TrendingUp,
   ShoppingCart,
   Plane,
-  Dices,
+  
   BarChart3,
   Layers,
   CheckCircle2,
@@ -28,13 +28,8 @@ const industries = [
     description: 'Pagos in-game, suscripciones y microtransacciones con métodos locales preferidos por los jugadores.',
   },
   {
-    icon: Dices,
-    name: 'Betting & Gambling',
-    description: 'Depósitos y retiros instantáneos con compliance regulatorio en cada jurisdicción.',
-  },
-  {
     icon: TrendingUp,
-    name: 'Forex & Trading',
+    name: 'Trading',
     description: 'Fondeo y retiro de cuentas de trading con liquidación rápida y múltiples divisas.',
   },
   {
