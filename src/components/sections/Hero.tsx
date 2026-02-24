@@ -13,9 +13,11 @@ const Hero = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Slogan */}
-          <p className="text-sm font-semibold tracking-widest uppercase text-primary">
-            Building Kredibility, one payment at a time
-          </p>
+          <div className="flex justify-center">
+            <span className="inline-block text-xs md:text-sm font-semibold tracking-widest uppercase text-primary border border-primary/30 bg-primary/5 backdrop-blur-sm px-6 py-2.5 rounded-full">
+              Building Kredibility, one payment at a time
+            </span>
+          </div>
 
           {/* Main headline */}
           <h1 className="text-4xl md:text-5xl lg:text-7xl font-bold text-foreground leading-tight">
