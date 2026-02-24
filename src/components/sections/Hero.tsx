@@ -1,6 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
+import heroBanner from '@/assets/hero-banner.png';
 
 const Hero = () => {
   return (
@@ -50,22 +51,17 @@ const Hero = () => {
             </Link>
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-3 gap-8 pt-12 max-w-2xl mx-auto">
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">300+</div>
-              <div className="text-sm text-muted-foreground mt-1">Métodos de Pago</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">15+</div>
-              <div className="text-sm text-muted-foreground mt-1">Países LatAm</div>
-            </div>
-            <div className="text-center">
-              <div className="text-3xl lg:text-4xl font-bold text-primary">50+</div>
-              <div className="text-sm text-muted-foreground mt-1">Divisas</div>
-            </div>
-          </div>
         </div>
+      </div>
+
+      {/* Banner separador */}
+      <div className="w-full mt-16">
+        <img
+          src={heroBanner}
+          alt="KredibilityPay - edificios corporativos"
+          className="w-full h-auto object-cover"
+          loading="eager"
+        />
       </div>
     </section>
   );
