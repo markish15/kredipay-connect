@@ -24,9 +24,8 @@ const Hero = () => {
           </h1>
 
           {/* Body */}
-          <p className="text-lg lg:text-xl leading-loose text-muted-foreground max-w-4xl mx-auto">
-            Simplifica los pagos globales y llega a millones de clientes con una sola integración, múltiples métodos de pago locales en LatAm, y una amplia variedad de divisas.
-            <span className="block text-center mt-1">Todo sin esfuerzo.</span>
+          <p className="text-base md:text-lg lg:text-xl leading-relaxed text-muted-foreground max-w-5xl mx-auto">
+            Simplifica los pagos globales y llega a millones de clientes con una sola integración, múltiples métodos de pago locales en LatAm, y una amplia variedad de divisas. Todo sin esfuerzo.
           </p>
 
           {/* CTAs */}
