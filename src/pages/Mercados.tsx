@@ -8,7 +8,7 @@ import {
   DollarSign, ArrowRight, Banknote, CreditCard, Globe
 } from 'lucide-react';
 import mercadosHero from '@/assets/mercados-hero.png';
-import mobilePayment from '@/assets/latam-mobile-payment.jpg';
+import CountryInsightsCarousel from '@/components/sections/CountryInsightsCarousel';
 
 const Mercados = () => {
   const marketInsights = [
@@ -193,16 +193,7 @@ const Mercados = () => {
               </div>
             </div>
             <div className="relative">
-              <img
-                src={mobilePayment}
-                alt="Pago móvil en LatAm"
-                className="rounded-3xl shadow-card w-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute -bottom-4 -left-4 bg-card p-4 rounded-2xl shadow-card border-2">
-                <div className="text-2xl font-bold text-primary">72%</div>
-                <div className="text-xs text-muted-foreground">Compras móviles</div>
-              </div>
+              <CountryInsightsCarousel />
             </div>
           </div>
         </div>
