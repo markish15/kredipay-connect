@@ -108,6 +108,9 @@ const Nosotros = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-4">
+              Sobre Nosotros
+            </p>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
               El puente entre tu negocio y{' '}
               <span className="text-primary">mercados emergentes</span>
