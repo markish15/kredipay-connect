@@ -55,11 +55,11 @@ const Hero = () => {
       </div>
 
       {/* Banner separador */}
-      <div className="w-full mt-16">
+      <div className="w-full mt-16 overflow-hidden">
         <img
           src={heroBanner}
           alt="KredibilityPay - edificios corporativos"
-          className="w-full h-auto object-cover"
+          className="w-full h-[200px] md:h-[280px] lg:h-[350px] object-cover object-center"
           loading="eager"
         />
       </div>
