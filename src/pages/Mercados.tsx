@@ -174,13 +174,12 @@ const Mercados = () => {
                 <span className="text-primary">cash-heavy</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-6 leading-relaxed">
-                En LatAm, el 55% de la población no tiene tarjeta de crédito internacional. 
-                Los métodos de pago locales — efectivo en tiendas, transferencias instantáneas 
-                y billeteras digitales — dominan el comercio.
+                En LATAM, más de la mitad de la población utiliza métodos de pago alternativos.
+                Transferencias instantáneas, pagos en efectivo en tiendas y billeteras digitales dominan el comercio.
               </p>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
-                Sin acceso a estos métodos, estás perdiendo más de la mitad de tus potenciales 
-                clientes. KredibilityPay te conecta con todos ellos.
+                Si no operas con estos métodos, estás perdiendo acceso a millones de clientes.
+                KredibilityPay te conecta con todos ellos.
               </p>
               <div className="flex flex-wrap gap-3">
                 <Badge variant="secondary" className="px-4 py-2 text-sm">Pix</Badge>
