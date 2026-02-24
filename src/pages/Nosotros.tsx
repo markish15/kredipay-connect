@@ -56,14 +56,6 @@ const Nosotros = () => {
     }
   ];
 
-  const team = [
-    { name: 'Carlos Mendoza', role: 'CEO & Co-founder', bg: 'Fintech · ex-Stripe · Stanford MBA' },
-    { name: 'Ana Lucía Reyes', role: 'CTO', bg: 'Ingeniería · ex-MercadoPago · MIT' },
-    { name: 'Ricardo Ferreira', role: 'COO', bg: 'Operaciones · ex-dLocal · INSEAD' },
-    { name: 'María José Ochoa', role: 'VP Sales', bg: 'Ventas Enterprise · ex-Adyen · Wharton' },
-    { name: 'David Nakamura', role: 'VP Engineering', bg: 'Sistemas distribuidos · ex-Nubank' },
-    { name: 'Valentina Cruz', role: 'Head of Compliance', bg: 'Regulación financiera · ex-Visa' }
-  ];
 
   const faqs = [
     {
@@ -192,34 +184,6 @@ const Nosotros = () => {
         </div>
       </section>
 
-      {/* Team */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center max-w-3xl mx-auto mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
-              Nuestro Equipo
-            </h2>
-            <p className="text-lg text-muted-foreground">
-              Liderazgo con experiencia en las fintech más grandes del mundo.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
-            {team.map((member, index) => (
-              <Card key={index} className="p-6 bg-card/50 backdrop-blur-sm border-2 rounded-2xl text-center hover:shadow-card transition-all">
-                <div className="w-20 h-20 bg-gradient-to-br from-primary/20 to-secondary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
-                  <span className="text-2xl font-bold text-primary">
-                    {member.name.split(' ').map(n => n[0]).join('').slice(0, 2)}
-                  </span>
-                </div>
-                <h3 className="text-lg font-bold text-foreground mb-1">{member.name}</h3>
-                <Badge className="bg-primary/10 text-primary border-0 mb-2">{member.role}</Badge>
-                <p className="text-xs text-muted-foreground">{member.bg}</p>
-              </Card>
-            ))}
-          </div>
-        </div>
-      </section>
 
       {/* Offices */}
       <section className="py-16 bg-primary/5">
