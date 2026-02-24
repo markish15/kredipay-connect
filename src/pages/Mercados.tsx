@@ -112,9 +112,9 @@ const Mercados = () => {
       <Header />
 
       {/* Hero */}
-      <section className="relative py-28 overflow-hidden">
+      <section className="relative py-28 lg:py-36 overflow-hidden min-h-[500px]">
         <div className="absolute inset-0">
-          <img src={mercadosHero} alt="Mercados LatAm" className="w-full h-full object-cover object-bottom" />
+          <img src={mercadosHero} alt="Mercados LatAm" className="w-full h-full object-cover object-[center_30%]" />
           <div className="absolute inset-0 bg-foreground/70" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -122,8 +122,8 @@ const Mercados = () => {
             <p className="text-sm font-semibold tracking-widest uppercase text-card/80 mb-4">
               Mercados LatAm
             </p>
-            <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-card mb-6 leading-snug">
-              La <span className="text-primary">oportunidad</span> más grande<br className="hidden lg:block" /> del comercio digital
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-card mb-6 leading-normal">
+              La <span className="text-primary">oportunidad</span> más grande del comercio digital
             </h1>
             <p className="text-xl text-card/80 max-w-2xl mx-auto leading-relaxed">
               500 millones de consumidores conectados, un mercado de $160B en eCommerce, 
