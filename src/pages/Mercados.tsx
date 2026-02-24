@@ -14,39 +14,39 @@ const Mercados = () => {
   const marketInsights = [
     {
       icon: Wifi,
-      stat: '78%',
+      stat: '~80%',
       label: 'Penetración de Internet',
       description: '500M+ usuarios conectados en LatAm, creciendo un 5% anual.'
     },
     {
       icon: Smartphone,
-      stat: '72%',
+      stat: '+80%',
       label: 'Compras vía Móvil',
-      description: '7 de cada 10 transacciones de eCommerce se realizan desde un smartphone.'
+      description: '8 de cada 10 transacciones de eCommerce se realizan desde un smartphone.'
     },
     {
       icon: ShoppingCart,
-      stat: '300M+',
+      stat: '+250M',
       label: 'Compradores Online',
       description: 'LatAm es el mercado de eCommerce con mayor crecimiento global.'
     },
     {
       icon: DollarSign,
-      stat: '$160B',
+      stat: '+250B USD',
       label: 'Volumen eCommerce',
-      description: 'Mercado de comercio electrónico proyectado para 2026 en la región.'
+      description: 'Volumen anual de comercio electrónico en la región.'
     },
     {
       icon: TrendingUp,
-      stat: '25%',
+      stat: '+18%',
       label: 'Crecimiento Anual',
       description: 'Tasa de crecimiento interanual del comercio digital en LatAm.'
     },
     {
       icon: Users,
-      stat: '55%',
+      stat: '+50%',
       label: 'Sub-bancarizados',
-      description: 'Más de la mitad de la población prefiere métodos de pago alternativos.'
+      description: 'Más del 50% de la población utiliza métodos de pago alternativos.'
     }
   ];
 
