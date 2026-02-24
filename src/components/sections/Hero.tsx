@@ -30,7 +30,7 @@ const Hero = () => {
               con una sola integración, múltiples métodos de pago locales en LatAm, 
               y una amplia variedad de divisas.
             </p>
-            <p className="font-bold text-foreground text-center">
+            <p className="text-muted-foreground text-center">
               Todo sin esfuerzo.
             </p>
           </div>
