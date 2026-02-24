@@ -14,7 +14,7 @@ const Hero = () => {
         <div className="max-w-4xl mx-auto text-center space-y-8">
           {/* Slogan */}
           <div className="flex justify-center">
-            <span className="inline-block text-xs md:text-sm font-semibold tracking-widest uppercase text-primary border border-primary/30 bg-primary/5 backdrop-blur-sm px-6 py-2.5 rounded-full">
+            <span className="inline-block text-xs md:text-sm font-semibold tracking-widest uppercase text-primary border border-primary/20 bg-gradient-to-r from-primary/10 via-primary/5 to-primary/10 backdrop-blur-md shadow-[inset_0_1px_1px_rgba(255,255,255,0.3),0_4px_20px_-4px_hsl(var(--primary)/0.15)] px-7 py-3 rounded-full">
               Building Kredibility, one payment at a time
             </span>
           </div>
