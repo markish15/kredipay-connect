@@ -89,8 +89,24 @@ const Soluciones = () => {
             </h2>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-            {industries.map((ind) => (
+          {/* Top row: 3 cards */}
+          <div className="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            {industries.slice(0, 3).map((ind) => (
+              <Card
+                key={ind.name}
+                className="p-8 bg-card/50 backdrop-blur-sm border-2 rounded-3xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
+              >
+                <div className="w-14 h-14 bg-primary/10 rounded-2xl flex items-center justify-center mb-5">
+                  <ind.icon className="h-7 w-7 text-primary" />
+                </div>
+                <h3 className="text-xl font-semibold text-foreground mb-3">{ind.name}</h3>
+                <p className="text-muted-foreground leading-relaxed">{ind.description}</p>
+              </Card>
+            ))}
+          </div>
+          {/* Bottom row: 2 cards centered between top ones */}
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mt-8">
+            {industries.slice(3).map((ind) => (
               <Card
                 key={ind.name}
                 className="p-8 bg-card/50 backdrop-blur-sm border-2 rounded-3xl hover:shadow-lg hover:-translate-y-1 transition-all duration-300"
