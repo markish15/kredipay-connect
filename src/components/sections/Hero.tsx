@@ -24,16 +24,10 @@ const Hero = () => {
           </h1>
 
           {/* Body */}
-          <div className="text-lg lg:text-xl leading-relaxed max-w-3xl mx-auto space-y-0">
-            <p className="text-muted-foreground">
-              Simplifica los pagos globales y llega a millones de clientes 
-              con una sola integración, múltiples métodos de pago locales en LatAm, 
-              y una amplia variedad de divisas.
-            </p>
-            <p className="text-muted-foreground text-center">
-              Todo sin esfuerzo.
-            </p>
-          </div>
+          <p className="text-lg lg:text-xl leading-loose text-muted-foreground max-w-4xl mx-auto">
+            Simplifica los pagos globales y llega a millones de clientes con una sola integración, múltiples métodos de pago locales en LatAm, y una amplia variedad de divisas.
+            <span className="block text-center mt-1">Todo sin esfuerzo.</span>
+          </p>
 
           {/* CTAs */}
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
