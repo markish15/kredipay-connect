@@ -8,7 +8,7 @@ import {
   DollarSign, ArrowRight, Banknote, CreditCard, Globe
 } from 'lucide-react';
 import mercadosHero from '@/assets/mercados-hero.png';
-import mobilePayment from '@/assets/latam-mobile-payment.jpg';
+import CountryCarousel from '@/components/sections/CountryCarousel';
 
 const Mercados = () => {
   const marketInsights = [
@@ -164,7 +164,7 @@ const Mercados = () => {
         </div>
       </section>
 
-      {/* Mobile-first visual section */}
+      {/* Mobile-first visual section with Country Carousel */}
       <section className="py-20 bg-secondary/5">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
@@ -181,29 +181,8 @@ const Mercados = () => {
                 Si no operas con estos métodos, estás perdiendo acceso a millones de clientes.
                 KredibilityPay te conecta con todos ellos.
               </p>
-              <div className="flex flex-wrap gap-3">
-                <Badge variant="secondary" className="px-4 py-2 text-sm">Pix</Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm">OXXO</Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm">Boleto</Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm">PSE</Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm">SPEI</Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm">Yape</Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm">Efecty</Badge>
-                <Badge variant="secondary" className="px-4 py-2 text-sm">MercadoPago</Badge>
-              </div>
             </div>
-            <div className="relative">
-              <img
-                src={mobilePayment}
-                alt="Pago móvil en LatAm"
-                className="rounded-3xl shadow-card w-full object-cover"
-                loading="lazy"
-              />
-              <div className="absolute -bottom-4 -left-4 bg-card p-4 rounded-2xl shadow-card border-2">
-                <div className="text-2xl font-bold text-primary">72%</div>
-                <div className="text-xs text-muted-foreground">Compras móviles</div>
-              </div>
-            </div>
+            <CountryCarousel />
           </div>
         </div>
       </section>
