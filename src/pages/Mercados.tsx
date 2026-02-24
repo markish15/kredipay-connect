@@ -7,7 +7,7 @@ import {
   Wifi, Smartphone, ShoppingCart, Users, TrendingUp,
   DollarSign, ArrowRight, Banknote, CreditCard, Globe
 } from 'lucide-react';
-import latamHero from '@/assets/latam-market-hero.jpg';
+import mercadosHero from '@/assets/mercados-hero.png';
 import mobilePayment from '@/assets/latam-mobile-payment.jpg';
 
 const Mercados = () => {
@@ -114,19 +114,19 @@ const Mercados = () => {
       {/* Hero */}
       <section className="relative py-28 overflow-hidden">
         <div className="absolute inset-0">
-          <img src={latamHero} alt="LatAm markets" className="w-full h-full object-cover" />
-          <div className="absolute inset-0 bg-foreground/70" />
+          <img src={mercadosHero} alt="Mercados LatAm" className="w-full h-full object-cover" />
+          <div className="absolute inset-0 bg-primary/60" />
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-4xl">
-            <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">
+          <div className="max-w-4xl mx-auto text-center">
+            <p className="text-sm font-semibold tracking-widest uppercase text-card/80 mb-4">
               Mercados LatAm
-            </Badge>
+            </p>
             <h1 className="text-4xl lg:text-6xl font-bold text-card mb-6 leading-tight">
               La oportunidad más grande del{' '}
-              <span className="text-primary">comercio digital</span>
+              <span className="text-card">comercio digital</span>
             </h1>
-            <p className="text-xl text-card/80 max-w-2xl leading-relaxed">
+            <p className="text-xl text-card/80 max-w-2xl mx-auto leading-relaxed">
               500 millones de consumidores conectados, un mercado de $160B en eCommerce, 
               y la tasa de crecimiento más alta del mundo. LatAm no espera.
             </p>
