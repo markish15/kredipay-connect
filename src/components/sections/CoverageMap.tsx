@@ -57,7 +57,7 @@ const CoverageMap = () => {
         {/* CTA */}
         <div className="text-center">
           <Link to="/mercados">
-            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl">
+            <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
               <MapPin className="mr-2 h-5 w-5" />
               Explorar Mercados
               <ArrowRight className="ml-2 h-5 w-5" />
