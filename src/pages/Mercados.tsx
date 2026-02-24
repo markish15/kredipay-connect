@@ -122,11 +122,12 @@ const Mercados = () => {
             <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-4">
               Mercados
             </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-card mb-6 leading-normal">
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-card mb-4 leading-normal">
               La <span className="text-primary">oportunidad</span> más grande del comercio digital
             </h1>
-            <p className="text-xl text-card/80 max-w-2xl mx-auto leading-relaxed">
-              +500M de consumidores conectados, +$250B en eCommerce y la mayor tasa de crecimiento global.
+            <p className="text-lg text-card/80 max-w-2xl mx-auto leading-relaxed">
+              500 millones de consumidores conectados, un mercado de $160B en eCommerce, 
+              y la tasa de crecimiento más alta del mundo. LatAm no espera.
             </p>
           </div>
         </div>
