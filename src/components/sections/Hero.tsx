@@ -1,7 +1,7 @@
 import { Button } from '@/components/ui/button';
 import { Link } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
-import heroBanner from '@/assets/hero-banner.png';
+import heroBanner from '@/assets/hero-banner.jpg';
 
 const Hero = () => {
   return (
