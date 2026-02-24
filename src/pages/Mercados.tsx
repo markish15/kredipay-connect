@@ -127,7 +127,7 @@ const Mercados = () => {
             </h1>
             <p className="text-lg text-card/80 max-w-2xl mx-auto leading-relaxed">
               500 millones de consumidores conectados, un mercado de $160B en eCommerce, 
-              y la tasa de crecimiento más alta del mundo. LatAm no espera.
+              y la tasa de crecimiento más alta del mundo. <span className="text-primary font-semibold">LatAm no espera.</span>
             </p>
           </div>
         </div>
