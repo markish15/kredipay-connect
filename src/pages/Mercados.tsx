@@ -119,7 +119,7 @@ const Mercados = () => {
         </div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="max-w-4xl mx-auto text-center">
-            <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-4">
+            <p className="text-sm font-semibold tracking-widest uppercase text-[#A6FFF7] mb-4">
               Mercados
             </p>
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-card mb-4 leading-normal">
