@@ -13,6 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
+import puenteImage from '@/assets/puente-latam.jpg';
 
 
 const Nosotros = () => {
@@ -126,7 +127,7 @@ const Nosotros = () => {
       {/* Why a payment gateway */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-16 items-center">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">
                 Nuestra razón de ser
@@ -146,6 +147,20 @@ const Nosotros = () => {
                 <p>
                   <strong className="text-foreground">Una sola integración. Todos los métodos. Todos los mercados.</strong>
                 </p>
+              </div>
+            </div>
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+                <img
+                  src={puenteImage}
+                  alt="Puente conectando mercados - metáfora de KredibilityPay"
+                  className="w-full h-auto object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
+              </div>
+              <div className="absolute -bottom-4 -right-4 bg-card border-2 border-primary/20 rounded-xl p-4 shadow-lg">
+                <div className="text-3xl font-bold text-primary">30+</div>
+                <div className="text-sm text-muted-foreground">Países conectados</div>
               </div>
             </div>
           </div>
