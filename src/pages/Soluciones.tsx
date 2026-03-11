@@ -67,9 +67,8 @@ const Soluciones = () => {
               <span className="text-primary">tu sector</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed mb-8 max-w-3xl mx-auto">
-              Cada industria tiene sus propios desafíos. Nuestra plataforma se adapta a las 
-              necesidades específicas de tu vertical con métodos de pago locales, compliance 
-              integrado y liquidación rápida.
+              Cada industria tiene sus propios desafíos. Nuestra plataforma se adapta a
+              tus necesidades específicas con métodos de pago locales y compliance integrado.
             </p>
             <Link to="/contacto">
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl px-10 py-6 text-lg">
