@@ -13,7 +13,7 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from '@/components/ui/accordion';
-import puenteImage from '@/assets/puente-latam.jpg';
+import puenteJkImage from '@/assets/puente-jk.jpg';
 
 
 const Nosotros = () => {
