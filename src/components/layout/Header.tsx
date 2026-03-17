@@ -60,7 +60,7 @@ const Header = () => {
           </nav>
 
           {/* Actions */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-3">
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center space-x-1.5 text-sm text-muted-foreground hover:text-primary transition-colors px-2 py-1 rounded-lg hover:bg-primary/5">
@@ -83,11 +83,6 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link to="/desarrolladores">
-              <Button variant="outline" size="sm">
-                {t('header.documentacion')}
-              </Button>
-            </Link>
             <Link to="/contacto">
               <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 {t('header.solicitarDemo')}
