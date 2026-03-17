@@ -10,10 +10,13 @@ const PaymentMethodLogo = ({ method, className = "h-6" }: PaymentMethodLogoProps
     'OXXO': 'oxxo',
     'Boleto': 'boleto',
     'Banco Azteca': 'banco-azteca',
+    'Banorte': 'banorte',
+    'Afirme': 'afirme',
     'Rapipago': 'rapipago',
     'Pago Fácil': 'pagofacil',
     'Khipu': 'khipu',
     '7-Eleven': '7eleven',
+    'Circle K': 'circlek',
     'Servipag': 'servipag',
   };
 

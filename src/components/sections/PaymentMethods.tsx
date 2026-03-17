@@ -2,8 +2,8 @@ import PaymentMethodLogo from '@/components/PaymentMethodLogo';
 
 const PaymentMethods = () => {
   const methods = [
-    'Pix', 'SPEI', 'OXXO', 'Boleto', 'Banco Azteca',
-    'Rapipago', 'Pago Fácil', 'Khipu', '7-Eleven', 'Servipag',
+    'Pix', 'SPEI', 'OXXO', 'Boleto', 'Banco Azteca', 'Banorte', 'Afirme',
+    'Rapipago', 'Pago Fácil', 'Khipu', '7-Eleven', 'Circle K', 'Servipag',
   ];
 
   return (
@@ -19,7 +19,6 @@ const PaymentMethods = () => {
           </p>
         </div>
 
-        {/* Payment logos grid */}
         <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
           {methods.map((method) => (
             <div
