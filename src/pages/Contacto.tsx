@@ -1,15 +1,59 @@
+import { useState } from 'react';
 import Header from '@/components/layout/Header';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import { supabase } from '@/integrations/supabase/client';
+import { useToast } from '@/hooks/use-toast';
 import {
   Code2, FileJson, TestTube, Rocket,
-  ArrowRight, CheckCircle2, Mail, Building2, User, MessageSquare
+  ArrowRight, CheckCircle2, Mail, Building2, User, MessageSquare, Loader2
 } from 'lucide-react';
 
 const Contacto = () => {
+  const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    company: '',
+    volume: '',
+    message: '',
+  });
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+
+    if (!formData.name || !formData.email || !formData.message) {
+      toast({ title: 'Por favor completa los campos requeridos', variant: 'destructive' });
+      return;
+    }
+
+    setIsSubmitting(true);
+    try {
+      const { data, error } = await supabase.functions.invoke('send-contact-email', {
+        body: formData,
+      });
+
+      if (error) throw error;
+
+      setIsSubmitted(true);
+      toast({ title: '¡Mensaje enviado!', description: 'Nos pondremos en contacto contigo pronto.' });
+    } catch (err) {
+      console.error('Error sending form:', err);
+      toast({ title: 'Error al enviar', description: 'Intenta de nuevo más tarde.', variant: 'destructive' });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   const integrationSteps = [
     {
       phase: '01',
@@ -91,11 +135,9 @@ const Contacto = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {integrationSteps.map((step, index) => (
                 <Card key={index} className="p-8 bg-card/50 backdrop-blur-sm border-2 rounded-2xl relative overflow-hidden hover:border-primary/30 transition-all group">
-                  {/* Phase number watermark */}
                   <div className="absolute top-4 right-6 text-7xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors select-none">
                     {step.phase}
                   </div>
-                  
                   <div className="relative">
                     <div className="flex items-center gap-3 mb-4">
                       <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
@@ -139,7 +181,6 @@ const Contacto = () => {
               </div>
             </div>
 
-            {/* API Code Preview */}
             <Card className="p-6 bg-foreground rounded-2xl border-0 overflow-hidden">
               <div className="flex items-center gap-2 mb-4">
                 <div className="w-3 h-3 rounded-full bg-destructive/60" />
@@ -185,56 +226,93 @@ const Contacto = () => {
               </p>
             </div>
 
-            <Card className="p-8 lg:p-12 bg-card/50 backdrop-blur-sm border-2 rounded-2xl">
-              <form className="grid md:grid-cols-2 gap-6" onSubmit={(e) => e.preventDefault()}>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground flex items-center gap-2">
-                    <User className="h-4 w-4 text-muted-foreground" />
-                    Nombre completo
-                  </label>
-                  <Input placeholder="Tu nombre" className="rounded-xl" />
+            {isSubmitted ? (
+              <Card className="p-12 bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-2xl text-center">
+                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+                  <CheckCircle2 className="h-8 w-8 text-primary" />
                 </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground flex items-center gap-2">
-                    <Mail className="h-4 w-4 text-muted-foreground" />
-                    Email corporativo
-                  </label>
-                  <Input type="email" placeholder="tu@empresa.com" className="rounded-xl" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground flex items-center gap-2">
-                    <Building2 className="h-4 w-4 text-muted-foreground" />
-                    Empresa
-                  </label>
-                  <Input placeholder="Nombre de tu empresa" className="rounded-xl" />
-                </div>
-                <div className="space-y-2">
-                  <label className="text-sm font-medium text-foreground flex items-center gap-2">
-                    <MessageSquare className="h-4 w-4 text-muted-foreground" />
-                    Volumen mensual estimado
-                  </label>
-                  <Input placeholder="Ej: $50K - $500K" className="rounded-xl" />
-                </div>
-                <div className="md:col-span-2 space-y-2">
-                  <label className="text-sm font-medium text-foreground">
-                    ¿Cómo podemos ayudarte?
-                  </label>
-                  <Textarea
-                    placeholder="Cuéntanos sobre tu negocio, los países donde operas y qué necesitas..."
-                    className="rounded-xl min-h-[120px]"
-                  />
-                </div>
-                <div className="md:col-span-2">
-                  <Button
-                    size="lg"
-                    className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl text-lg py-6"
-                  >
-                    Solicitar Demo
-                    <ArrowRight className="ml-2 h-5 w-5" />
-                  </Button>
-                </div>
-              </form>
-            </Card>
+                <h3 className="text-2xl font-bold text-foreground mb-3">¡Mensaje enviado!</h3>
+                <p className="text-lg text-muted-foreground mb-6">
+                  Gracias por contactarnos. Nuestro equipo revisará tu solicitud y te responderá a la brevedad.
+                </p>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setIsSubmitted(false);
+                    setFormData({ name: '', email: '', company: '', volume: '', message: '' });
+                  }}
+                  className="rounded-2xl"
+                >
+                  Enviar otro mensaje
+                </Button>
+              </Card>
+            ) : (
+              <Card className="p-8 lg:p-12 bg-card/50 backdrop-blur-sm border-2 rounded-2xl">
+                <form className="grid md:grid-cols-2 gap-6" onSubmit={handleSubmit}>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <User className="h-4 w-4 text-muted-foreground" />
+                      Nombre completo *
+                    </label>
+                    <Input name="name" value={formData.name} onChange={handleChange} placeholder="Tu nombre" className="rounded-xl" required />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <Mail className="h-4 w-4 text-muted-foreground" />
+                      Email corporativo *
+                    </label>
+                    <Input name="email" type="email" value={formData.email} onChange={handleChange} placeholder="tu@empresa.com" className="rounded-xl" required />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <Building2 className="h-4 w-4 text-muted-foreground" />
+                      Empresa
+                    </label>
+                    <Input name="company" value={formData.company} onChange={handleChange} placeholder="Nombre de tu empresa" className="rounded-xl" />
+                  </div>
+                  <div className="space-y-2">
+                    <label className="text-sm font-medium text-foreground flex items-center gap-2">
+                      <MessageSquare className="h-4 w-4 text-muted-foreground" />
+                      Volumen mensual estimado
+                    </label>
+                    <Input name="volume" value={formData.volume} onChange={handleChange} placeholder="Ej: $50K - $500K" className="rounded-xl" />
+                  </div>
+                  <div className="md:col-span-2 space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      ¿Cómo podemos ayudarte? *
+                    </label>
+                    <Textarea
+                      name="message"
+                      value={formData.message}
+                      onChange={handleChange}
+                      placeholder="Cuéntanos sobre tu negocio, los países donde operas y qué necesitas..."
+                      className="rounded-xl min-h-[120px]"
+                      required
+                    />
+                  </div>
+                  <div className="md:col-span-2">
+                    <Button
+                      type="submit"
+                      size="lg"
+                      disabled={isSubmitting}
+                      className="w-full bg-primary text-primary-foreground hover:bg-primary/90 rounded-2xl text-lg py-6"
+                    >
+                      {isSubmitting ? (
+                        <>
+                          <Loader2 className="mr-2 h-5 w-5 animate-spin" />
+                          Enviando...
+                        </>
+                      ) : (
+                        <>
+                          Solicitar Demo
+                          <ArrowRight className="ml-2 h-5 w-5" />
+                        </>
+                      )}
+                    </Button>
+                  </div>
+                </form>
+              </Card>
+            )}
           </div>
         </div>
       </section>
