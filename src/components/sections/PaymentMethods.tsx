@@ -1,6 +1,8 @@
 import PaymentMethodLogo from '@/components/PaymentMethodLogo';
+import { useTranslation } from 'react-i18next';
 
 const PaymentMethods = () => {
+  const { t } = useTranslation();
   const methods = [
     'Pix', 'SPEI', 'OXXO', 'Boleto', 'Banco Azteca', 'Banorte', 'Afirme',
     'Rapipago', 'Pago Fácil', 'Khipu', '7-Eleven', 'Circle K', 'Servipag',
@@ -11,11 +13,10 @@ const PaymentMethods = () => {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-14">
           <h2 className="text-3xl lg:text-5xl font-bold text-foreground mb-6">
-            <span className="text-primary">Métodos de Pago</span> Locales
+            <span className="text-primary">{t('paymentMethods.title1')}</span> {t('paymentMethods.title2')}
           </h2>
           <p className="text-xl text-muted-foreground leading-relaxed">
-            Desde transferencias bancarias hasta wallets móviles y pagos en efectivo. 
-            Todo con una sola integración.
+            {t('paymentMethods.description')}
           </p>
         </div>
 
@@ -37,7 +38,7 @@ const PaymentMethods = () => {
         </div>
 
         <p className="text-center text-muted-foreground mt-10 text-sm">
-          …y muchos más por país.
+          {t('paymentMethods.more')}
         </p>
       </div>
     </section>
