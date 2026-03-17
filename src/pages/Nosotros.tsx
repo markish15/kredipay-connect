@@ -108,35 +108,33 @@ const Nosotros = () => {
       {/* Why a payment gateway */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">
-                Nuestra razón de ser
-              </Badge>
-              <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                ¿Por qué una pasarela de pagos para mercados emergentes?
-              </h2>
-              <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
-                <p>
-                  Los mercados emergentes representan el 85% del crecimiento global en eCommerce, 
-                  pero sus sistemas de pago son fragmentados, locales y complejos.
-                </p>
-                <p>
-                  Las empresas globales pierden hasta el 60% de sus conversiones al no ofrecer 
-                  métodos de pago locales. Nosotros eliminamos esa barrera.
-                </p>
-                <p>
-                  <strong className="text-foreground">Una sola integración. Todos los métodos. Todos los mercados.</strong>
-                </p>
-              </div>
+          <div className="max-w-3xl mx-auto text-center">
+            <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">
+              Nuestra razón de ser
+            </Badge>
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
+              ¿Por qué una pasarela de pagos para mercados emergentes?
+            </h2>
+            <div className="space-y-4 text-lg text-muted-foreground leading-relaxed">
+              <p>
+                Los mercados emergentes representan el 85% del crecimiento global en eCommerce, 
+                pero sus sistemas de pago son fragmentados, locales y complejos.
+              </p>
+              <p>
+                Las empresas globales pierden hasta el 60% de sus conversiones al no ofrecer 
+                métodos de pago locales. Nosotros eliminamos esa barrera.
+              </p>
+              <p>
+                <strong className="text-foreground">Una sola integración. Todos los métodos. Todos los mercados.</strong>
+              </p>
             </div>
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src={puenteJkImage}
-                alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
-                className="w-full h-auto object-cover"
-              />
-            </div>
+          </div>
+          <div className="max-w-4xl mx-auto mt-12 rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src={puenteJkImage}
+              alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
+              className="w-full h-auto object-cover"
+            />
           </div>
         </div>
       </section>
