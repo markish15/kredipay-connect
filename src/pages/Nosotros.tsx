@@ -108,6 +108,13 @@ const Nosotros = () => {
       {/* Why a payment gateway */}
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden shadow-2xl">
+            <img
+              src={puenteJkImage}
+              alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
+              className="w-full h-auto object-cover"
+            />
+          </div>
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">
               Nuestra razón de ser
@@ -128,13 +135,6 @@ const Nosotros = () => {
                 <strong className="text-foreground">Una sola integración. Todos los métodos. Todos los mercados.</strong>
               </p>
             </div>
-          </div>
-          <div className="max-w-4xl mx-auto mt-12 rounded-2xl overflow-hidden shadow-2xl">
-            <img
-              src={puenteJkImage}
-              alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
-              className="w-full h-auto object-cover"
-            />
           </div>
         </div>
       </section>
