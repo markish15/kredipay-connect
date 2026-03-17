@@ -3,6 +3,12 @@ import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuTrigger,
+} from '@/components/ui/dropdown-menu';
 import kIcon from '@/assets/kredibilitypay-k-icon.png';
 
 const Header = () => {
@@ -16,8 +22,8 @@ const Header = () => {
     { name: t('header.contactanos'), href: '/contacto' },
   ];
 
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es');
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
   };
 
   return (
@@ -55,13 +61,22 @@ const Header = () => {
 
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <button
-              onClick={toggleLanguage}
-              className="flex items-center space-x-1.5 text-sm text-muted-foreground hover:text-primary transition-colors px-2 py-1 rounded-lg hover:bg-primary/5"
-            >
-              <Globe className="h-4 w-4" />
-              <span className="font-medium">{i18n.language === 'es' ? 'EN' : 'ES'}</span>
-            </button>
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <button className="flex items-center space-x-1.5 text-sm text-muted-foreground hover:text-primary transition-colors px-2 py-1 rounded-lg hover:bg-primary/5">
+                  <Globe className="h-4 w-4" />
+                  <span className="font-medium">{i18n.language === 'es' ? 'ES' : 'EN'}</span>
+                </button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent align="end">
+                <DropdownMenuItem onClick={() => changeLanguage('es')} className={i18n.language === 'es' ? 'bg-accent' : ''}>
+                  🇪🇸 Español
+                </DropdownMenuItem>
+                <DropdownMenuItem onClick={() => changeLanguage('en')} className={i18n.language === 'en' ? 'bg-accent' : ''}>
+                  🇺🇸 English
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
             <Link to="/desarrolladores">
               <Button variant="outline" size="sm">
                 {t('header.documentacion')}
@@ -105,13 +120,22 @@ const Header = () => {
                 </Link>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <button
-                  onClick={toggleLanguage}
-                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary w-full px-3 py-2"
-                >
-                  <Globe className="h-4 w-4" />
-                  <span>{i18n.language === 'es' ? 'Switch to English' : 'Cambiar a Español'}</span>
-                </button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary w-full px-3 py-2">
+                      <Globe className="h-4 w-4" />
+                      <span>{i18n.language === 'es' ? 'Español' : 'English'}</span>
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem onClick={() => changeLanguage('es')}>
+                      🇪🇸 Español
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => changeLanguage('en')}>
+                      🇺🇸 English
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
                 <Link to="/desarrolladores">
                   <Button variant="outline" className="w-full">
                     {t('header.documentacion')}
