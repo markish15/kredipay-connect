@@ -68,7 +68,7 @@ const Header = () => {
                   <span className="font-medium">{i18n.language === 'es' ? 'ES' : 'EN'}</span>
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="min-w-[80px] bg-popover/95 backdrop-blur-sm rounded-xl p-1">
+              <DropdownMenuContent side="right" align="start" className="min-w-[80px] bg-popover/95 backdrop-blur-sm rounded-xl p-1">
                 <DropdownMenuItem
                   onClick={() => changeLanguage('es')}
                   className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'es' ? 'bg-primary text-primary-foreground hover:bg-primary/90' : ''}`}
