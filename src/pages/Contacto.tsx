@@ -143,7 +143,7 @@ const Contacto = () => {
                       <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
                         <step.icon className="h-6 w-6 text-primary" />
                       </div>
-                      <Badge variant="outline" className="border-primary/30 text-primary text-xs">
+                      <Badge className="bg-secondary text-secondary-foreground border-0 text-xs">
                         Fase {step.phase}
                       </Badge>
                     </div>
