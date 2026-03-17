@@ -111,6 +111,10 @@ const Nosotros = () => {
           </div>
         </div>
       </section>
+
+      {/* Why a payment gateway */}
+      <section className="py-16">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">
               Nuestra razón de ser
