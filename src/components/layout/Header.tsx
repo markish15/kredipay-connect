@@ -22,8 +22,8 @@ const Header = () => {
     { name: t('header.contactanos'), href: '/contacto' },
   ];
 
-  const toggleLanguage = () => {
-    i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es');
+  const changeLanguage = (lang: string) => {
+    i18n.changeLanguage(lang);
   };
 
   return (
