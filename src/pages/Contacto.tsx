@@ -88,7 +88,7 @@ const Contacto = () => {
                 const Icon = stepIcons[index];
                 return (
                   <Card key={index} className="p-8 bg-card/50 backdrop-blur-sm border-2 rounded-2xl relative overflow-hidden hover:border-primary/30 transition-all group">
-                    <div className="absolute top-4 right-6 text-7xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors select-none">
+                    <div className="absolute top-4 right-6 text-7xl font-bold text-muted/30 group-hover:text-muted/50 transition-colors select-none">
                       {phases[index]}
                     </div>
                     <div className="relative">
@@ -96,7 +96,7 @@ const Contacto = () => {
                         <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
                           <Icon className="h-6 w-6 text-primary" />
                         </div>
-                        <Badge variant="outline" className="border-secondary text-secondary text-xs">
+                        <Badge variant="outline" className="border-primary text-primary text-xs">
                           {t('contacto.fase')} {phases[index]}
                         </Badge>
                       </div>
