@@ -135,7 +135,7 @@ const Contacto = () => {
             <div className="grid md:grid-cols-2 gap-8">
               {integrationSteps.map((step, index) => (
                 <Card key={index} className="p-8 bg-card/50 backdrop-blur-sm border-2 rounded-2xl relative overflow-hidden hover:border-primary/30 transition-all group">
-                  <div className="absolute top-4 right-6 text-7xl font-bold text-primary/5 group-hover:text-primary/10 transition-colors select-none">
+                  <div className="absolute top-4 right-6 text-7xl font-bold text-primary/10 group-hover:text-primary/20 transition-colors select-none">
                     {step.phase}
                   </div>
                   <div className="relative">
