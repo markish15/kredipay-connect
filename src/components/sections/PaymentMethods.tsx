@@ -24,9 +24,9 @@ const PaymentMethods = () => {
           {methods.map((method) => (
             <div
               key={method}
-              className="bg-card/60 backdrop-blur-sm px-5 py-4 rounded-2xl border-2 border-border/50 hover:border-primary/40 hover:shadow-md transition-all duration-300"
+              className="bg-card/60 backdrop-blur-sm rounded-2xl border-2 border-border/50 hover:border-primary/40 hover:shadow-md transition-all duration-300 w-[140px] h-[80px] flex items-center justify-center p-3"
             >
-              <PaymentMethodLogo method={method} className="h-6" />
+              <PaymentMethodLogo method={method} className="max-h-10 max-w-[110px] object-contain" />
             </div>
           ))}
         </div>
