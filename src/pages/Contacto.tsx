@@ -77,7 +77,7 @@ const Contacto = () => {
       <section className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-16">
-            <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-4">{t('contacto.stepsBadge')}</p>
+            <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">{t('contacto.stepsBadge')}</Badge>
             <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">{t('contacto.stepsTitle')}</h2>
             <p className="text-lg text-muted-foreground">{t('contacto.stepsDesc')}</p>
           </div>
