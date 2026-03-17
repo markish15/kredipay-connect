@@ -101,14 +101,14 @@ const Nosotros = () => {
               en las economías con mayor potencial de crecimiento del mundo.
             </p>
           </div>
-          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
-            <img
-              src={puenteJkImage}
-              alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
-              className="w-full h-auto object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
-            />
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none" />
-          </div>
+        </div>
+        <div className="relative overflow-hidden group cursor-pointer mt-10">
+          <img
+            src={puenteJkImage}
+            alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
+            className="w-full h-[400px] object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
+          />
+          <div className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none" />
         </div>
       </section>
 
