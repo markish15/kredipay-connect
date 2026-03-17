@@ -164,8 +164,8 @@ const Contacto = () => {
           <div className="grid lg:grid-cols-2 gap-16 items-center">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-6">
-                Todo lo que necesitas,{' '}
-                <span className="text-primary">nada que no</span>
+              Todo lo que necesitas{' '}
+              <span className="text-primary">para escalar sin fricción</span>
               </h2>
               <p className="text-lg text-muted-foreground mb-8 leading-relaxed">
                 Una plataforma diseñada para simplificar, no para complicar. 
