@@ -88,7 +88,7 @@ const Contacto = () => {
                 const Icon = stepIcons[index];
                 return (
                   <Card key={index} className="p-8 bg-card/50 backdrop-blur-sm border-2 rounded-2xl relative overflow-hidden hover:border-primary/30 transition-all group">
-                    <div className="absolute top-4 right-6 text-7xl font-bold text-muted/30 group-hover:text-muted/50 transition-colors select-none">
+                    <div className="absolute top-4 right-6 text-7xl font-bold text-foreground/[0.06] group-hover:text-foreground/[0.1] transition-colors select-none">
                       {phases[index]}
                     </div>
                     <div className="relative">
