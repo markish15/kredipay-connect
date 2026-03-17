@@ -20,14 +20,20 @@ const PaymentMethods = () => {
         </div>
 
         <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
-          {methods.map((method) => (
-            <div
-              key={method}
-              className="bg-card/60 backdrop-blur-sm rounded-2xl border-2 border-border/50 hover:border-primary/40 hover:shadow-md transition-all duration-300 w-[140px] h-[80px] flex items-center justify-center p-3"
-            >
-              <PaymentMethodLogo method={method} className="max-h-10 max-w-[110px] object-contain" />
-            </div>
-          ))}
+          {methods.map((method) => {
+            const isSquare = ['Pago Fácil', '7-Eleven'].includes(method);
+            return (
+              <div
+                key={method}
+                className="bg-card/60 backdrop-blur-sm rounded-2xl border-2 border-border/50 hover:border-primary/40 hover:shadow-md transition-all duration-300 w-[140px] h-[80px] flex items-center justify-center p-3"
+              >
+                <PaymentMethodLogo 
+                  method={method} 
+                  className={isSquare ? "max-h-14 max-w-[60px] object-contain" : "max-h-10 max-w-[110px] object-contain"} 
+                />
+              </div>
+            );
+          })}
         </div>
 
         <p className="text-center text-muted-foreground mt-10 text-sm">
