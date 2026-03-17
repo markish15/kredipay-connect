@@ -130,19 +130,12 @@ const Nosotros = () => {
                 </p>
               </div>
             </div>
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-2xl">
+            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
               <img
                 src={puenteJkImage}
                 alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
                 className="w-full h-auto object-cover"
               />
-                <div className="absolute inset-0 bg-gradient-to-t from-primary/20 to-transparent" />
-              </div>
-              <div className="absolute -bottom-4 -right-4 bg-card border-2 border-primary/20 rounded-xl p-4 shadow-lg">
-                <div className="text-3xl font-bold text-primary">30+</div>
-                <div className="text-sm text-muted-foreground">Países conectados</div>
-              </div>
             </div>
           </div>
         </div>
