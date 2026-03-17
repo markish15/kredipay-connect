@@ -15,7 +15,7 @@ const Contacto = () => {
       phase: '01',
       icon: Code2,
       title: 'Conecta tu API',
-      description: 'Integra nuestra REST API en minutos con SDKs para Python, Node.js, PHP, Java y más.',
+      description: 'Integra nuestra API en minutos con SDKs para Python, Node.js, PHP, Java y más.',
       detail: 'Una sola API key. Documentación clara. Sandbox incluido.'
     },
     {
