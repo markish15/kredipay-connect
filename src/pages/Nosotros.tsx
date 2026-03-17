@@ -17,12 +17,6 @@ import puenteJkImage from '@/assets/puente-jk.jpg';
 
 
 const Nosotros = () => {
-  const stats = [
-    { value: '50K+', label: 'Merchants Activos' },
-    { value: '$2B+', label: 'Procesado Anualmente' },
-    { value: '30+', label: 'Países' },
-    { value: '150+', label: 'Empleados' }
-  ];
 
   const values = [
     {
