@@ -6,7 +6,6 @@ import { Link } from 'react-router-dom';
 import {
   Target, Users, TrendingUp, Award,
   Shield, Heart, Zap, ArrowRight
-} from 'lucide-react';
 import {
   Accordion,
   AccordionContent,
