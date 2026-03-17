@@ -120,13 +120,22 @@ const Header = () => {
                 </Link>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <button
-                  onClick={toggleLanguage}
-                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary w-full px-3 py-2"
-                >
-                  <Globe className="h-4 w-4" />
-                  <span>{i18n.language === 'es' ? 'Switch to English' : 'Cambiar a Español'}</span>
-                </button>
+                <DropdownMenu>
+                  <DropdownMenuTrigger asChild>
+                    <button className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary w-full px-3 py-2">
+                      <Globe className="h-4 w-4" />
+                      <span>{i18n.language === 'es' ? 'Español' : 'English'}</span>
+                    </button>
+                  </DropdownMenuTrigger>
+                  <DropdownMenuContent>
+                    <DropdownMenuItem onClick={() => changeLanguage('es')}>
+                      🇪🇸 Español
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => changeLanguage('en')}>
+                      🇺🇸 English
+                    </DropdownMenuItem>
+                  </DropdownMenuContent>
+                </DropdownMenu>
                 <Link to="/desarrolladores">
                   <Button variant="outline" className="w-full">
                     {t('header.documentacion')}
