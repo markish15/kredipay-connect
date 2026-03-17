@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import argentinaImg from '@/assets/carousel-argentina.jpg';
 import boliviaImg from '@/assets/carousel-bolivia.jpg';
