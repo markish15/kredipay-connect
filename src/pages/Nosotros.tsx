@@ -85,10 +85,10 @@ const Nosotros = () => {
       <Header />
 
       {/* Hero */}
-      <section className="relative py-24 overflow-hidden">
+      <section className="relative py-16 overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
-          <div className="max-w-4xl mx-auto text-center">
+          <div className="max-w-4xl mx-auto text-center mb-10">
             <p className="text-sm font-semibold tracking-widest uppercase text-primary mb-4">
               Sobre Nosotros
             </p>
@@ -101,20 +101,16 @@ const Nosotros = () => {
               en las economías con mayor potencial de crecimiento del mundo.
             </p>
           </div>
-        </div>
-      </section>
-
-
-      {/* Why a payment gateway */}
-      <section className="py-20">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="max-w-4xl mx-auto mb-12 rounded-2xl overflow-hidden shadow-2xl">
+          <div className="max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-2xl group cursor-pointer">
             <img
               src={puenteJkImage}
               alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
-              className="w-full h-auto object-cover"
+              className="w-full h-auto object-cover transition-all duration-500 group-hover:scale-105 group-hover:brightness-110"
             />
+            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-gradient-to-t from-primary/30 to-transparent pointer-events-none" />
           </div>
+        </div>
+      </section>
           <div className="max-w-3xl mx-auto text-center">
             <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">
               Nuestra razón de ser
