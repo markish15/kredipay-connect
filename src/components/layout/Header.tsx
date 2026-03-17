@@ -137,11 +137,6 @@ const Header = () => {
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-                <Link to="/desarrolladores">
-                  <Button variant="outline" className="w-full">
-                    {t('header.documentacion')}
-                  </Button>
-                </Link>
                 <Link to="/contacto">
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                     {t('header.solicitarDemo')}
