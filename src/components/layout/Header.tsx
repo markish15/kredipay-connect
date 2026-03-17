@@ -71,13 +71,13 @@ const Header = () => {
               <DropdownMenuContent side="right" align="start" className="min-w-[80px] bg-popover/95 backdrop-blur-sm rounded-xl p-1">
                 <DropdownMenuItem
                   onClick={() => changeLanguage('es')}
-                  className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'es' ? 'bg-primary text-primary-foreground hover:bg-primary/90' : ''}`}
+                  className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'es' ? 'bg-accent text-accent-foreground hover:bg-accent/80' : ''}`}
                 >
                   {i18n.language === 'es' ? '✓ ' : ''}ES
                 </DropdownMenuItem>
                 <DropdownMenuItem
                   onClick={() => changeLanguage('en')}
-                  className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'en' ? 'bg-primary text-primary-foreground hover:bg-primary/90' : ''}`}
+                  className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'en' ? 'bg-accent text-accent-foreground hover:bg-accent/80' : ''}`}
                 >
                   {i18n.language === 'en' ? '✓ ' : ''}EN
                 </DropdownMenuItem>
