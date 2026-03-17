@@ -37,7 +37,7 @@ const PaymentMethods = () => {
         </div>
 
         <p className="text-center text-muted-foreground mt-10 text-sm">
-          …y muchos más en toda Latinoamérica y África.
+          …y muchos más por país.
         </p>
       </div>
     </section>
