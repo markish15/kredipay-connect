@@ -129,7 +129,7 @@ const Nosotros = () => {
                 </p>
               </div>
             </div>
-            <div className="rounded-2xl overflow-hidden border-2 border-primary/30 shadow-2xl">
+            <div className="rounded-2xl overflow-hidden border-2 border-transparent hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300">
               <img
                 src={puenteJkImage}
                 alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
