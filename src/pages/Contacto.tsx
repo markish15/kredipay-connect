@@ -67,8 +67,7 @@ const Contacto = () => {
               <span className="text-primary">Todos los pagos.</span>
             </h1>
             <p className="text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Integra 300+ métodos de pago en LatAm con una única API RESTful. 
-              Sin contratos por país. Sin complejidad innecesaria.
+              Integra 250+ métodos de pago en LatAm con una única API. Sin complejidad innecesaria.
             </p>
           </div>
         </div>
