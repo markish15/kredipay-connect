@@ -165,14 +165,14 @@ const CountryCarousel = () => {
         {/* Navigation arrows */}
         <button
           onClick={prev}
-          className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-foreground hover:bg-card transition-colors"
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md shadow-lg flex items-center justify-center text-white/80 hover:bg-white/35 hover:text-white transition-all"
           aria-label="País anterior"
         >
           <ChevronLeft className="h-5 w-5" />
         </button>
         <button
           onClick={next}
-          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-foreground hover:bg-card transition-colors"
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-white/20 backdrop-blur-md shadow-lg flex items-center justify-center text-white/80 hover:bg-white/35 hover:text-white transition-all"
           aria-label="País siguiente"
         >
           <ChevronRight className="h-5 w-5" />
