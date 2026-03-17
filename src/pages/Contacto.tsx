@@ -61,7 +61,7 @@ const Contacto = () => {
         <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-secondary/5" />
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
           <div className="max-w-4xl mx-auto text-center">
-            <Badge className="bg-primary/20 text-primary border-primary/30 mb-6">{t('contacto.heroBadge')}</Badge>
+            <p className="text-sm uppercase tracking-widest text-primary font-semibold mb-4">{t('contacto.heroBadge')}</p>
             <h1 className="text-4xl lg:text-6xl font-bold text-foreground mb-6">
               {t('contacto.heroTitle1')}{' '}
               <span className="text-primary">{t('contacto.heroTitle2')}</span>
