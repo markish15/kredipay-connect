@@ -102,13 +102,6 @@ const Nosotros = () => {
             </p>
           </div>
         </div>
-        <div className="relative overflow-hidden mt-10">
-          <img
-            src={puenteJkImage}
-            alt="Puente Juscelino Kubitschek en Brasilia - símbolo de conexión"
-            className="w-full h-[400px] object-cover"
-          />
-        </div>
       </section>
 
       {/* Why a payment gateway */}
