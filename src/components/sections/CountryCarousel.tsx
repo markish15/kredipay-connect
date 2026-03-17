@@ -1,6 +1,7 @@
 import { useState, useEffect, useCallback } from 'react';
 import { Badge } from '@/components/ui/badge';
 import { cn } from '@/lib/utils';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 import argentinaImg from '@/assets/carousel-argentina.jpg';
 import boliviaImg from '@/assets/carousel-bolivia.jpg';
@@ -119,6 +120,10 @@ const CountryCarousel = () => {
     setActive((prev) => (prev + 1) % countrySlides.length);
   }, []);
 
+  const prev = useCallback(() => {
+    setActive((prev) => (prev - 1 + countrySlides.length) % countrySlides.length);
+  }, []);
+
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(next, 4000);
@@ -156,6 +161,22 @@ const CountryCarousel = () => {
           <span className="text-2xl">{slide.flag}</span>
           <span className="text-lg font-bold text-foreground">{slide.name}</span>
         </div>
+
+        {/* Navigation arrows */}
+        <button
+          onClick={prev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-foreground hover:bg-card transition-colors"
+          aria-label="País anterior"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-foreground hover:bg-card transition-colors"
+          aria-label="País siguiente"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
 
         {/* Insight text */}
         <div className="absolute bottom-20 left-5 right-5 lg:bottom-24">
