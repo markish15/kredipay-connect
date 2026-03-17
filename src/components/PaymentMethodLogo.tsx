@@ -4,37 +4,21 @@ interface PaymentMethodLogoProps {
 }
 
 const PaymentMethodLogo = ({ method, className = "h-6" }: PaymentMethodLogoProps) => {
-  // Map payment method names to logo file names
   const logoMap: Record<string, string> = {
     'Pix': 'pix',
-    'Boleto': 'boleto',
-    'Boleto Bancário': 'boleto',
     'SPEI': 'spei',
     'OXXO': 'oxxo',
-    'PSE': 'pse',
-    'Efecty': 'efecty',
-    'PagoEfectivo': 'pagoefectivo',
-    'Yape': 'yape',
-    'WebPay': 'webpay',
-    'Khipu': 'khipu',
-    'MercadoPago': 'mercadopago',
+    'Boleto': 'boleto',
+    'Banco Azteca': 'banco-azteca',
     'Rapipago': 'rapipago',
-    'M-Pesa': 'mpesa',
-    'Fawry': 'fawry',
-    'EFT': 'eft',
-    'Paystack': 'paystack',
-    'Mobile Money': 'mobile-money',
-    'MTN Money': 'mobile-money',
-    'Airtel Money': 'mobile-money',
-    'Vodafone Cash': 'mobile-money',
-    'Tigo Pesa': 'mobile-money',
-    'MTN Mobile Money': 'mobile-money',
-    'Tarjetas Locales': 'tarjetas-locales',
+    'Pago Fácil': 'pagofacil',
+    'Khipu': 'khipu',
+    '7-Eleven': '7eleven',
+    'Servipag': 'servipag',
   };
 
   const logoFileName = logoMap[method];
 
-  // If we have a logo for this method, show it
   if (logoFileName) {
     return (
       <img 
@@ -42,7 +26,6 @@ const PaymentMethodLogo = ({ method, className = "h-6" }: PaymentMethodLogoProps
         alt={method}
         className={className}
         onError={(e) => {
-          // Fallback to text if image fails to load
           e.currentTarget.style.display = 'none';
           if (e.currentTarget.nextSibling) {
             (e.currentTarget.nextSibling as HTMLElement).style.display = 'inline';
@@ -52,7 +35,6 @@ const PaymentMethodLogo = ({ method, className = "h-6" }: PaymentMethodLogoProps
     );
   }
 
-  // Fallback to text for methods without logos
   return <span className="text-xs font-medium">{method}</span>;
 };
 
