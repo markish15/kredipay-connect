@@ -2,10 +2,8 @@ import PaymentMethodLogo from '@/components/PaymentMethodLogo';
 
 const PaymentMethods = () => {
   const methods = [
-    'Pix', 'SPEI', 'OXXO', 'Boleto', 'PSE', 'PagoEfectivo', 
-    'WebPay', 'Khipu', 'Efecty', 'MercadoPago', 'M-Pesa', 
-    'Mobile Money', 'Fawry', 'EFT', 'Paystack', 'Yape',
-    'Rapipago', 'Tarjetas Locales',
+    'Pix', 'SPEI', 'OXXO', 'Boleto', 'Banco Azteca',
+    'Rapipago', 'Pago Fácil', 'Khipu', '7-Eleven', 'Servipag',
   ];
 
   return (
