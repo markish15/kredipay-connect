@@ -162,6 +162,22 @@ const CountryCarousel = () => {
           <span className="text-lg font-bold text-foreground">{slide.name}</span>
         </div>
 
+        {/* Navigation arrows */}
+        <button
+          onClick={prev}
+          className="absolute left-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-foreground hover:bg-card transition-colors"
+          aria-label="País anterior"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
+        <button
+          onClick={next}
+          className="absolute right-3 top-1/2 -translate-y-1/2 w-10 h-10 rounded-full bg-card/80 backdrop-blur-sm shadow-lg flex items-center justify-center text-foreground hover:bg-card transition-colors"
+          aria-label="País siguiente"
+        >
+          <ChevronRight className="h-5 w-5" />
+        </button>
+
         {/* Insight text */}
         <div className="absolute bottom-20 left-5 right-5 lg:bottom-24">
           <p className="text-sm text-card/90 italic drop-shadow-md">{slide.insight}</p>
