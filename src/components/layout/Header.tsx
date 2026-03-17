@@ -68,12 +68,18 @@ const Header = () => {
                   <span className="font-medium">{i18n.language === 'es' ? 'ES' : 'EN'}</span>
                 </button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end">
-                <DropdownMenuItem onClick={() => changeLanguage('es')} className={i18n.language === 'es' ? 'bg-accent' : ''}>
-                  🇪🇸 Español
+              <DropdownMenuContent align="end" className="min-w-[80px] bg-popover/95 backdrop-blur-sm rounded-xl p-1">
+                <DropdownMenuItem
+                  onClick={() => changeLanguage('es')}
+                  className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'es' ? 'bg-primary text-primary-foreground hover:bg-primary/90' : ''}`}
+                >
+                  {i18n.language === 'es' ? '✓ ' : ''}ES
                 </DropdownMenuItem>
-                <DropdownMenuItem onClick={() => changeLanguage('en')} className={i18n.language === 'en' ? 'bg-accent' : ''}>
-                  🇺🇸 English
+                <DropdownMenuItem
+                  onClick={() => changeLanguage('en')}
+                  className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'en' ? 'bg-primary text-primary-foreground hover:bg-primary/90' : ''}`}
+                >
+                  {i18n.language === 'en' ? '✓ ' : ''}EN
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
