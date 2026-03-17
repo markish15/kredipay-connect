@@ -120,6 +120,10 @@ const CountryCarousel = () => {
     setActive((prev) => (prev + 1) % countrySlides.length);
   }, []);
 
+  const prev = useCallback(() => {
+    setActive((prev) => (prev - 1 + countrySlides.length) % countrySlides.length);
+  }, []);
+
   useEffect(() => {
     if (isPaused) return;
     const interval = setInterval(next, 4000);
