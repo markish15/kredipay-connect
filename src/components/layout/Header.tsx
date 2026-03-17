@@ -1,18 +1,24 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
 import kIcon from '@/assets/kredibilitypay-k-icon.png';
 
 const Header = () => {
+  const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const navigation = [
-    { name: 'Soluciones', href: '/soluciones' },
-    { name: 'Mercados', href: '/mercados' },
-    { name: 'Nosotros', href: '/nosotros' },
-    { name: 'Contáctanos', href: '/contacto' },
+    { name: t('header.soluciones'), href: '/soluciones' },
+    { name: t('header.mercados'), href: '/mercados' },
+    { name: t('header.nosotros'), href: '/nosotros' },
+    { name: t('header.contactanos'), href: '/contacto' },
   ];
+
+  const toggleLanguage = () => {
+    i18n.changeLanguage(i18n.language === 'es' ? 'en' : 'es');
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
@@ -38,7 +44,7 @@ const Header = () => {
           <nav className="hidden md:flex items-center space-x-8">
             {navigation.map((item) => (
               <Link
-                key={item.name}
+                key={item.href}
                 to={item.href}
                 className="text-sm font-medium text-foreground hover:text-primary transition-colors duration-200"
               >
@@ -49,20 +55,23 @@ const Header = () => {
 
           {/* Actions */}
           <div className="hidden md:flex items-center space-x-4">
-            <div className="flex items-center space-x-2">
-              <Globe className="h-4 w-4 text-muted-foreground" />
-              <select className="text-sm bg-transparent border-none focus:outline-none">
-                <option value="es">ES</option>
-                <option value="en">EN</option>
-                <option value="pt">PT</option>
-              </select>
-            </div>
-            <Button variant="outline" size="sm">
-              Documentación
-            </Button>
-            <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
-              Solicitar Demo
-            </Button>
+            <button
+              onClick={toggleLanguage}
+              className="flex items-center space-x-1.5 text-sm text-muted-foreground hover:text-primary transition-colors px-2 py-1 rounded-lg hover:bg-primary/5"
+            >
+              <Globe className="h-4 w-4" />
+              <span className="font-medium">{i18n.language === 'es' ? 'EN' : 'ES'}</span>
+            </button>
+            <Link to="/desarrolladores">
+              <Button variant="outline" size="sm">
+                {t('header.documentacion')}
+              </Button>
+            </Link>
+            <Link to="/contacto">
+              <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
+                {t('header.solicitarDemo')}
+              </Button>
+            </Link>
           </div>
 
           {/* Mobile menu button */}
@@ -87,20 +96,32 @@ const Header = () => {
             <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3 border-t">
               {navigation.map((item) => (
                 <Link
-                  key={item.name}
+                  key={item.href}
                   to={item.href}
                   className="block px-3 py-2 text-base font-medium text-foreground hover:text-primary hover:bg-muted rounded-md transition-colors duration-200"
+                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.name}
                 </Link>
               ))}
               <div className="px-3 py-2 space-y-2">
-                <Button variant="outline" className="w-full">
-                  Documentación
-                </Button>
-                <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
-                  Solicitar Demo
-                </Button>
+                <button
+                  onClick={toggleLanguage}
+                  className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary w-full px-3 py-2"
+                >
+                  <Globe className="h-4 w-4" />
+                  <span>{i18n.language === 'es' ? 'Switch to English' : 'Cambiar a Español'}</span>
+                </button>
+                <Link to="/desarrolladores">
+                  <Button variant="outline" className="w-full">
+                    {t('header.documentacion')}
+                  </Button>
+                </Link>
+                <Link to="/contacto">
+                  <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
+                    {t('header.solicitarDemo')}
+                  </Button>
+                </Link>
               </div>
             </div>
           </div>

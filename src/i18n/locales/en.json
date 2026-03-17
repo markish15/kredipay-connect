@@ -1,0 +1,322 @@
+{
+  "header": {
+    "soluciones": "Solutions",
+    "mercados": "Markets",
+    "nosotros": "About Us",
+    "contactanos": "Contact Us",
+    "documentacion": "Documentation",
+    "solicitarDemo": "Request Demo"
+  },
+  "hero": {
+    "slogan": "Building Kredibility, one payment at a time",
+    "title1": "From local to global,",
+    "title2": "frictionless",
+    "body": "Simplify global payments and reach millions of customers with a single integration, multiple local payment methods in LatAm, and a wide variety of currencies. All effortlessly.",
+    "ctaPrimary": "Get Started",
+    "ctaSecondary": "View Solutions",
+    "stat1Value": "250+",
+    "stat1Label": "Payment Methods",
+    "stat2Value": "15+",
+    "stat2Label": "LatAm Countries",
+    "stat3Value": "50+",
+    "stat3Label": "Currencies"
+  },
+  "paymentMethods": {
+    "title1": "Local Payment",
+    "title2": "Methods",
+    "description": "From bank transfers to mobile wallets and cash payments. All with a single integration.",
+    "more": "…and many more per country."
+  },
+  "coverageMap": {
+    "title1": "Coverage across",
+    "title2": "Latin America",
+    "description": "Active presence in the most dynamic markets of the region.",
+    "cta": "Explore Markets"
+  },
+  "homeCTA": {
+    "title1": "Ready to expand in",
+    "title2": "LatAm",
+    "description": "Contact us today and discover how KredibilityPay can simplify your payments in Latin America with a single integration.",
+    "cta": "Contact Us"
+  },
+  "mercados": {
+    "heroLabel": "Markets",
+    "heroTitle1": "The",
+    "heroTitle2": "opportunity",
+    "heroTitle3": "biggest in digital commerce",
+    "heroDesc": "500 million connected consumers, a $160B eCommerce market, and the highest growth rate in the world.",
+    "heroHighlight": "LatAm won't wait.",
+    "insightsTitle": "Market pulse",
+    "insightsDesc": "Key data that explains why LatAm is a market you can't ignore.",
+    "insights": [
+      { "stat": "~80%", "label": "Internet Penetration", "description": "500M+ connected users in LatAm, growing 5% annually." },
+      { "stat": "+80%", "label": "Mobile Purchases", "description": "8 out of 10 eCommerce transactions are made from a smartphone." },
+      { "stat": "+250M", "label": "Online Buyers", "description": "LatAm is the fastest-growing eCommerce market globally." },
+      { "stat": "+250B USD", "label": "eCommerce Volume", "description": "Annual e-commerce volume in the region." },
+      { "stat": "+18%", "label": "Annual Growth", "description": "Year-over-year growth rate of digital commerce in LatAm." },
+      { "stat": "+50%", "label": "Underbanked", "description": "Over 50% of the population uses alternative payment methods." }
+    ],
+    "mobileTitle1": "Mobile-first,",
+    "mobileTitle2": "cash-heavy",
+    "mobileDesc1": "In LATAM, more than half of the population uses alternative payment methods. Instant transfers, in-store cash payments, and digital wallets dominate commerce.",
+    "mobileDesc2": "If you don't operate with these methods, you're losing access to millions of customers. KredibilityPay connects you with all of them.",
+    "zoomTitle": "Market zoom",
+    "zoomDesc": "What we offer in each country: cash and online methods, all integrated.",
+    "cashLabel": "Cash / Voucher",
+    "onlineLabel": "Online / Digital",
+    "hab": "pop.",
+    "ecomm": "eComm:",
+    "ctaTitle1": "Ready to conquer",
+    "ctaTitle2": "LatAm",
+    "ctaDesc": "Talk to our team and discover how to activate local payments in the markets that matter most to your business.",
+    "ctaBtn": "Contact Us"
+  },
+  "soluciones": {
+    "heroLabel": "Solutions by industry",
+    "heroTitle1": "Payments designed for",
+    "heroTitle2": "your sector",
+    "heroDesc": "Every industry has its own challenges. Our platform adapts to your specific needs with local payment methods and built-in compliance.",
+    "industriesTitle1": "Industries that",
+    "industriesTitle2": "trust",
+    "industriesTitle3": "us",
+    "industries": [
+      { "name": "Gaming", "description": "In-game payments, subscriptions, and microtransactions with preferred local methods." },
+      { "name": "Trading", "description": "Trading account funding and withdrawals with fast settlement and multiple currencies." },
+      { "name": "eCommerce", "description": "Optimized checkout with the payment methods your customers actually use." },
+      { "name": "Travel & Airlines", "description": "Airlines, search engines, and agencies with local payments in each origin market." },
+      { "name": "Other Sectors", "description": "SaaS, education, marketplaces, and more. Flexible solution that adapts to your vertical." }
+    ],
+    "payinsTitle": "Pay-ins",
+    "payoutsTitle": "Pay-outs",
+    "payinsPayoutsDesc": "Collect and pay across all of Latin America with a single platform.",
+    "payinsDesc": "Accept payments with the local methods your customers prefer: transfers, wallets, cash, and local cards.",
+    "payins": [
+      "300+ local payment methods",
+      "Market-optimized checkout",
+      "Approval rates above 95%",
+      "Automatic currency conversion"
+    ],
+    "payoutsDesc": "Send mass payments to suppliers, affiliates, or winners directly to their local accounts.",
+    "payouts": [
+      "Disbursements in local currency or USD/EUR",
+      "Settlement in 24h",
+      "Mass payouts API",
+      "Automatic reconciliation and reports"
+    ],
+    "portalTitle": "Merchant",
+    "portalTitle2": "Portal",
+    "portalDesc": "Full control of your payment operations in one place.",
+    "portalKpis": [
+      { "label": "Volume Today", "value": "$148,320" },
+      { "label": "Transactions", "value": "2,847" },
+      { "label": "Approval", "value": "96.8%" },
+      { "label": "Merchants", "value": "124" }
+    ],
+    "portalChart": "Transaction volume — Last 30 days",
+    "portalFeatures": [
+      "Real-time dashboard",
+      "Reports & analytics",
+      "Sub-merchant management",
+      "Risk control",
+      "Advanced settings"
+    ],
+    "ctaTitle1": "Ready to integrate",
+    "ctaTitle2": "KredibilityPay",
+    "ctaDesc": "Talk to our team and discover how we can accelerate your payment operations in Latin America.",
+    "ctaBtn": "Contact Us"
+  },
+  "industrias": {
+    "heroTitle1": "Specialized",
+    "heroTitle2": "Industries",
+    "heroDesc": "Payment solutions designed specifically for high-risk industries. Proven experience in sectors where other processors refuse to operate.",
+    "desafios": "Challenges",
+    "soluciones": "Solutions",
+    "hablarExperto": "Talk to an Expert",
+    "industries": [
+      {
+        "title": "iGaming & Betting",
+        "description": "Specialized solutions for online casinos, sports betting, and gaming.",
+        "challenges": ["High bank rejection rates", "Need for fast payouts", "Complex regulatory compliance", "High fraud risk"],
+        "solutions": ["Optimized local payment methods", "Payouts in under 24h", "Specialized anti-fraud engine", "Automated KYC/AML", "Multi-currency support"],
+        "tags": ["Online Casinos", "Sports Betting", "Poker", "eSports"]
+      },
+      {
+        "title": "iFX & CFD Trading",
+        "description": "Payment infrastructure for forex and CFD brokers.",
+        "challenges": ["Instant deposits required", "Frequent and fast withdrawals", "Strict regulation", "Multi-currency conversion"],
+        "solutions": ["Real-time deposits", "Automated 24/7 withdrawals", "Global regulatory compliance", "Competitive FX", "High-availability API"],
+        "tags": ["Forex", "CFDs", "Crypto Trading", "Binary Options"]
+      },
+      {
+        "title": "Adult & Creators",
+        "description": "Discreet and secure payments for adult content and creator platforms.",
+        "challenges": ["Rejection by traditional processors", "Need for discretion", "Complex recurring payments", "High chargebacks"],
+        "solutions": ["Specialized high-risk processing", "Discreet billing descriptor", "Subscriptions and recurring payments", "Chargeback prevention", "Automated creator payouts"],
+        "tags": ["Content Platforms", "Subscriptions", "Live Streaming", "Fan Sites"]
+      },
+      {
+        "title": "Nutra & Subscriptions",
+        "description": "Optimized payments for supplements, wellness, and subscription models.",
+        "challenges": ["High transaction volume", "Subscriptions and rebilling", "Chargeback rates", "Health compliance"],
+        "solutions": ["Smart rebilling", "Chargeback reduction", "Multiple payment methods", "Dunning management", "Advanced analytics"],
+        "tags": ["Supplements", "Health Products", "Subscription Boxes", "Wellness"]
+      }
+    ],
+    "ctaTitle": "Your industry not listed?",
+    "ctaDesc": "We work with dozens of high-risk verticals. Contact us for a customized solution.",
+    "ctaBtn": "Inquire Now"
+  },
+  "cobertura": {
+    "heroTitle1": "Geographic",
+    "heroTitle2": "Coverage",
+    "heroDesc": "Local payment methods in the most dynamic markets of Latin America and Africa. One integration, global reach.",
+    "statsLabels": ["Active Countries", "Payment Methods", "Approval Rate", "Settlement Time"],
+    "paises": "countries",
+    "metodosPago": "Payment Methods",
+    "latinoamerica": "Latin America",
+    "africa": "Africa",
+    "countries": {
+      "Brasil": { "details": "Largest LatAm market. Pix with instant 24/7 approval." },
+      "México": { "details": "SPEI with real-time settlement. OXXO for cash payments." },
+      "Colombia": { "details": "PSE leading online bank transfers." },
+      "Perú": { "details": "Yape with explosive growth in mobile payments." },
+      "Chile": { "details": "WebPay with high ecommerce penetration." },
+      "Argentina": { "details": "Full integration with MercadoLibre ecosystem." },
+      "Ecuador": { "details": "Dollarized economy. Optimized bank transfers." },
+      "Uruguay": { "details": "Broadest cash payment network." },
+      "Kenia": { "details": "M-Pesa with 96% mobile payment penetration." },
+      "Sudáfrica": { "details": "EFT with direct bank settlement." },
+      "Nigeria": { "details": "Largest African economy. USSD without internet needed." },
+      "Ghana": { "details": "Leader in mobile money adoption." },
+      "Egipto": { "details": "Fawry with 120,000+ payment points network." },
+      "Tanzania": { "details": "Three main mobile money operators." },
+      "Uganda": { "details": "High penetration of mobile financial services." },
+      "Marruecos": { "details": "CMI leading electronic payments gateway." }
+    },
+    "ctaTitle": "Looking for coverage in another country?",
+    "ctaDesc": "We're constantly expanding. Contact us to learn about our roadmap.",
+    "ctaBtn": "Request Information"
+  },
+  "desarrolladores": {
+    "heroTitle1": "Documentation for",
+    "heroTitle2": "Developers",
+    "heroDesc": "RESTful APIs, SDKs in multiple languages, and comprehensive documentation. Integrate KredibilityPay in minutes, not days.",
+    "verDocs": "View Documentation",
+    "probarSandbox": "Try API in Sandbox",
+    "quickStart": "Quick Start",
+    "sdksPlugins": "SDKs & Plugins",
+    "officialSdks": "Official SDKs",
+    "ecommercePlugins": "E-commerce Plugins",
+    "apiReference": "API Reference",
+    "apiDesc": "RESTful API with complete endpoints for payments, payouts, refunds, and more.",
+    "endpoints": [
+      { "description": "Create a payment transaction" },
+      { "description": "Query transaction status" },
+      { "description": "Create a mass payout" },
+      { "description": "Process refund" },
+      { "description": "List transactions" },
+      { "description": "Configure webhooks" }
+    ],
+    "webhooks": "Webhooks",
+    "webhooksDesc": "Receive real-time notifications about transaction events. Configure webhooks to keep your system synchronized.",
+    "webhookFeatures": [
+      "Real-time events",
+      "Automatic retries",
+      "HMAC signature verification",
+      "Sandbox testing"
+    ],
+    "recursosTitle": "Additional Resources",
+    "apiKeys": "API Keys",
+    "apiKeysDesc": "Manage your API keys in the dashboard",
+    "irDashboard": "Go to Dashboard",
+    "guias": "Guides",
+    "guiasDesc": "Step-by-step tutorials for common use cases",
+    "verGuias": "View Guides",
+    "sandbox": "Sandbox",
+    "sandboxDesc": "Test the API without affecting real data",
+    "acceder": "Access"
+  },
+  "nosotros": {
+    "heroLabel": "About Us",
+    "heroTitle1": "The bridge between your business and",
+    "heroTitle2": "emerging markets",
+    "heroDesc": "We were born with a clear mission: to eliminate payment friction in the economies with the greatest growth potential in the world.",
+    "razonBadge": "Our reason for being",
+    "razonTitle": "Why a payment gateway for emerging markets?",
+    "razonP1": "Emerging markets represent 85% of global eCommerce growth, but their payment systems are fragmented, local, and complex.",
+    "razonP2": "Global companies lose up to 60% of their conversions by not offering local payment methods. We eliminate that barrier.",
+    "razonP3": "One integration. All methods. All markets.",
+    "valoresTitle": "Our Values",
+    "valoresDesc": "The principles that guide every decision and every line of code.",
+    "values": [
+      { "title": "Transparency", "description": "Clear pricing, no hidden costs. Real-time reports so you always know where you stand." },
+      { "title": "Security", "description": "PCI DSS Level 1 certified, KYC/AML. The security of your funds is our #1 priority." },
+      { "title": "Human Support", "description": "Team available 24/7. Response in minutes, not days. Every merchant matters." },
+      { "title": "Innovation", "description": "Cutting-edge technology to maximize approval, reduce fraud, and optimize costs." },
+      { "title": "Inclusion", "description": "We democratize access to digital payments for underbanked populations in emerging markets." },
+      { "title": "Ethics", "description": "Compliance first. We operate under the strictest regulatory standards in each market." }
+    ],
+    "faqTitle": "Frequently Asked Questions",
+    "faqs": [
+      { "question": "What is KredibilityPay?", "answer": "KredibilityPay is a payment gateway specialized in emerging markets. We offer a single API to integrate 300+ local payment methods in LatAm and Africa, enabling global companies to collect and pay simply and securely." },
+      { "question": "In which countries do you operate?", "answer": "We operate in over 30 countries, with a strong presence in Brazil, Mexico, Colombia, Chile, Peru, Argentina, and key African markets like Kenya, South Africa, and Nigeria." },
+      { "question": "How long does integration take?", "answer": "Basic integration can be completed in 1-2 days with our SDKs and documentation. For more complex enterprise integrations, our technical team accompanies you every step." },
+      { "question": "What payment methods do you support?", "answer": "We support over 300 methods including Pix, OXXO, PSE, SPEI, Boleto, Yape, MercadoPago, local bank transfers, local and international cards, digital wallets, and cash payments." },
+      { "question": "How do you handle compliance and regulation?", "answer": "We are PCI DSS Level 1 certified, comply with KYC/AML in each jurisdiction, and hold local licenses where required. Our compliance team continuously monitors regulations." },
+      { "question": "Do you offer pay-outs in addition to pay-ins?", "answer": "Yes. Our platform supports pay-ins (collections) and pay-outs (disbursements) with the same API. You can pay suppliers, affiliates, or process refunds in local currency." }
+    ],
+    "ctaTitle1": "Ready to work",
+    "ctaTitle2": "together",
+    "ctaDesc": "Join thousands of companies that trust KredibilityPay for their payments in emerging markets.",
+    "ctaBtn": "Contact Us"
+  },
+  "contacto": {
+    "heroBadge": "Simple Integration",
+    "heroTitle1": "One API.",
+    "heroTitle2": "All payments.",
+    "heroDesc1": "Integrate 250+ payment methods in LatAm with a single API.",
+    "heroDesc2": "No unnecessary complexity.",
+    "stepsTitle": "4 steps. Done.",
+    "stepsDesc": "Phased process, documented and with support at every stage.",
+    "steps": [
+      { "title": "Connect your API", "description": "Integrate our API in minutes with SDKs for Python, Node.js, PHP, Java, and more.", "detail": "A single API key. Clear documentation. Sandbox included." },
+      { "title": "Configure your methods", "description": "Select the countries and payment methods you need from your dashboard.", "detail": "Activate Pix, OXXO, PSE, SPEI, and 250+ methods with one click." },
+      { "title": "Test in Sandbox", "description": "Validate each payment flow in our test environment before going to production.", "detail": "Simulate approvals, rejections, and callbacks in real time." },
+      { "title": "Go Live", "description": "Activate production and start receiving payments. Our team accompanies you at launch.", "detail": "Dedicated 24/7 support during your go-live." }
+    ],
+    "fase": "Phase",
+    "workflowTitle1": "Everything you need",
+    "workflowTitle2": "to scale without friction",
+    "workflowDesc": "A platform designed to simplify, not to complicate. Every tool is built so you can focus on growing.",
+    "workflowFeatures": [
+      "Single API for pay-ins and pay-outs",
+      "Real-time webhooks",
+      "Unified multi-country dashboard",
+      "Automatic reporting and reconciliation",
+      "Configurable risk management",
+      "Dedicated technical support"
+    ],
+    "formTitle": "Let's talk",
+    "formDesc": "Tell us about your business and we'll show you how KredibilityPay can help.",
+    "successTitle": "Message sent!",
+    "successDesc": "Thank you for contacting us. Our team will review your request and respond shortly.",
+    "sendAnother": "Send another message",
+    "labelName": "Full name",
+    "labelEmail": "Corporate email",
+    "labelCompany": "Company",
+    "labelVolume": "Estimated monthly volume",
+    "labelMessage": "How can we help you?",
+    "placeholderName": "Your name",
+    "placeholderEmail": "you@company.com",
+    "placeholderCompany": "Your company name",
+    "placeholderVolume": "E.g.: $50K - $500K",
+    "placeholderMessage": "Tell us about your business, the countries where you operate, and what you need...",
+    "submitBtn": "Request Demo",
+    "submitting": "Sending...",
+    "toastRequired": "Please fill in the required fields",
+    "toastSuccess": "Message sent!",
+    "toastSuccessDesc": "We'll get in touch with you soon.",
+    "toastError": "Error sending",
+    "toastErrorDesc": "Please try again later."
+  }
+}
