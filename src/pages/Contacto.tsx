@@ -23,7 +23,7 @@ const Contacto = () => {
       icon: FileJson,
       title: 'Configura tus métodos',
       description: 'Selecciona los países y métodos de pago que necesitas desde tu dashboard.',
-      detail: 'Activa Pix, OXXO, PSE, SPEI y 300+ métodos con un clic.'
+      detail: 'Activa Pix, OXXO, PSE, SPEI y 250+ métodos con un clic.'
     },
     {
       phase: '03',
