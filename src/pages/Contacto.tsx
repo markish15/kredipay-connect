@@ -96,7 +96,7 @@ const Contacto = () => {
                         <div className="w-12 h-12 bg-primary/10 rounded-2xl flex items-center justify-center">
                           <Icon className="h-6 w-6 text-primary" />
                         </div>
-                        <Badge variant="outline" className="border-secondary text-secondary text-xs">
+                        <Badge variant="outline" className="border-primary text-primary text-xs">
                           {t('contacto.fase')} {phases[index]}
                         </Badge>
                       </div>
