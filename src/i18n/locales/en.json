@@ -271,7 +271,8 @@
     "ctaBtn": "Contact Us"
   },
   "contacto": {
-    "heroBadge": "Simple Integration",
+    "heroBadge": "Start Today",
+    "stepsBadge": "Simple Integration",
     "heroTitle1": "One API.",
     "heroTitle2": "All payments.",
     "heroDesc1": "Integrate 250+ payment methods in LatAm with a single API.",
