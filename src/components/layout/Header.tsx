@@ -36,7 +36,7 @@ const Header = () => {
               <img
                 src={fullLogo}
                 alt="KredibilityPay"
-                className="w-auto object-contain" style={{ height: '100px' }}
+                className="w-auto object-contain" style={{ height: '200px' }}
                 loading="eager"
               />
             </Link>
