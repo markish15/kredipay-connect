@@ -61,7 +61,7 @@ const Header = () => {
               <DropdownMenuTrigger asChild>
                 <button className="flex items-center space-x-1.5 text-sm text-muted-foreground hover:text-primary transition-colors px-2 py-1 rounded-lg hover:bg-primary/5">
                   <Globe className="h-4 w-4" />
-                  <span className="font-medium">{i18n.language === 'es' ? 'ES' : 'EN'}</span>
+                  <span className="font-medium">{i18n.language === 'es' ? 'ES' : i18n.language === 'pt' ? 'PT' : 'EN'}</span>
                 </button>
               </DropdownMenuTrigger>
               <DropdownMenuContent side="bottom" align="center" className="min-w-[80px] bg-popover/95 backdrop-blur-sm rounded-xl p-1">
@@ -76,6 +76,12 @@ const Header = () => {
                   className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'en' ? 'bg-accent text-accent-foreground hover:bg-accent/80' : ''}`}
                 >
                   {i18n.language === 'en' ? '✓ ' : ''}EN
+                </DropdownMenuItem>
+                <DropdownMenuItem
+                  onClick={() => changeLanguage('pt')}
+                  className={`justify-center rounded-lg font-semibold text-sm px-4 py-1.5 ${i18n.language === 'pt' ? 'bg-accent text-accent-foreground hover:bg-accent/80' : ''}`}
+                >
+                  {i18n.language === 'pt' ? '✓ ' : ''}PT
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
