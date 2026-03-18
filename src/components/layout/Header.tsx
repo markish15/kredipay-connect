@@ -32,17 +32,13 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <div className="flex items-center">
-            <Link to="/" className="flex items-center gap-2">
+            <Link to="/" className="flex items-center">
               <img
-                src={kIcon}
+                src={fullLogo}
                 alt="KredibilityPay"
-                className="h-7 w-7 object-contain"
+                className="h-10 object-contain"
                 loading="eager"
               />
-              <span className="text-sm font-medium leading-none">
-                <span className="text-primary">Kredibility</span>
-                <span className="text-foreground">Pay</span>
-              </span>
             </Link>
           </div>
 
