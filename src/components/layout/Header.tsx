@@ -9,7 +9,7 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from '@/components/ui/dropdown-menu';
-import kIcon from '@/assets/kredibilitypay-k-icon.png';
+import fullLogo from '@/assets/kredibilitypay-logo-full.svg';
 
 const Header = () => {
   const { t, i18n } = useTranslation();
