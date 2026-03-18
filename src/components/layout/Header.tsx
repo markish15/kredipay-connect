@@ -127,7 +127,7 @@ const Header = () => {
                   <DropdownMenuTrigger asChild>
                     <button className="flex items-center space-x-2 text-sm text-muted-foreground hover:text-primary w-full px-3 py-2">
                       <Globe className="h-4 w-4" />
-                      <span>{i18n.language === 'es' ? 'Español' : 'English'}</span>
+                      <span>{i18n.language === 'es' ? 'Español' : i18n.language === 'pt' ? 'Português' : 'English'}</span>
                     </button>
                   </DropdownMenuTrigger>
                   <DropdownMenuContent>
@@ -136,6 +136,9 @@ const Header = () => {
                     </DropdownMenuItem>
                     <DropdownMenuItem onClick={() => changeLanguage('en')}>
                       🇺🇸 English
+                    </DropdownMenuItem>
+                    <DropdownMenuItem onClick={() => changeLanguage('pt')}>
+                      🇧🇷 Português
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
