@@ -115,7 +115,7 @@ const Soluciones = () => {
               </div>
             </Card>
 
-            <Card className="p-8 bg-card/50 backdrop-blur-sm border-2 rounded-3xl">
+            <Card className="p-8 bg-card/50 backdrop-blur-sm border-2 border-primary/30 rounded-3xl">
               <div className="flex items-center gap-4 mb-6">
                 <div className="w-14 h-14 bg-secondary/10 rounded-2xl flex items-center justify-center">
                   <ArrowUpFromLine className="h-7 w-7 text-secondary" />
