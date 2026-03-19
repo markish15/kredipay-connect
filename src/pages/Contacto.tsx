@@ -1,10 +1,18 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+import { useLocation } from 'react-router-dom';
 import Header from '@/components/layout/Header';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Textarea } from '@/components/ui/textarea';
+import {
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 import { supabase } from '@/integrations/supabase/client';
 import { useToast } from '@/hooks/use-toast';
 import { useTranslation } from 'react-i18next';
@@ -15,14 +23,32 @@ import {
 
 const stepIcons = [Code2, FileJson, TestTube, Rocket];
 
+const volumeOptions = [
+  '$10K – $100K',
+  '$100K – $250K',
+  '$250K – $500K',
+  '$500K – $1M',
+  '$1M – $2.5M',
+  '+$2.5M',
+];
+
 const Contacto = () => {
   const { t } = useTranslation();
   const { toast } = useToast();
+  const location = useLocation();
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [formData, setFormData] = useState({
     name: '', email: '', company: '', volume: '', message: '',
   });
+
+  useEffect(() => {
+    if (location.hash === '#demo-form') {
+      setTimeout(() => {
+        document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+      }, 100);
+    }
+  }, [location.hash]);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData(prev => ({ ...prev, [e.target.name]: e.target.value }));
@@ -165,7 +191,7 @@ const Contacto = () => {
       </section>
 
       {/* Contact Form */}
-      <section className="py-20">
+      <section id="demo-form" className="py-20">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
@@ -220,7 +246,18 @@ const Contacto = () => {
                       <MessageSquare className="h-4 w-4 text-muted-foreground" />
                       {t('contacto.labelVolume')}
                     </label>
-                    <Input name="volume" value={formData.volume} onChange={handleChange} placeholder={t('contacto.placeholderVolume')} className="rounded-xl" />
+                    <Select value={formData.volume} onValueChange={(value) => setFormData(prev => ({ ...prev, volume: value }))}>
+                      <SelectTrigger className="rounded-xl">
+                        <SelectValue placeholder={t('contacto.placeholderVolume')} />
+                      </SelectTrigger>
+                      <SelectContent>
+                        {volumeOptions.map((option) => (
+                          <SelectItem key={option} value={option}>
+                            {option}
+                          </SelectItem>
+                        ))}
+                      </SelectContent>
+                    </Select>
                   </div>
                   <div className="md:col-span-2 space-y-2">
                     <label className="text-sm font-medium text-foreground">

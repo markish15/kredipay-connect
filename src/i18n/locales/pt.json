@@ -5,7 +5,7 @@
     "nosotros": "Sobre Nós",
     "contactanos": "Contato",
     "documentacion": "Documentação",
-    "solicitarDemo": "Solicitar Demo"
+    "solicitarDemo": "Comece Hoje"
   },
   "hero": {
     "slogan": "Building Kredibility, one payment at a time",
@@ -37,7 +37,7 @@
     "title1": "Pronto para expandir na",
     "title2": "LatAm",
     "description": "Entre em contato hoje e descubra como a KredibilityPay pode simplificar seus pagamentos na América Latina com uma única integração.",
-    "cta": "Fale Conosco"
+    "cta": "Comece Hoje"
   },
   "mercados": {
     "heroLabel": "Mercados",
@@ -69,7 +69,7 @@
     "ctaTitle1": "Pronto para conquistar a",
     "ctaTitle2": "LatAm",
     "ctaDesc": "Fale com nossa equipe e descubra como ativar pagamentos locais nos mercados que mais importam para o seu negócio.",
-    "ctaBtn": "Fale Conosco"
+    "ctaBtn": "Comece Hoje"
   },
   "soluciones": {
     "heroLabel": "Soluções por indústria",
@@ -123,7 +123,7 @@
     "ctaTitle1": "Pronto para integrar a",
     "ctaTitle2": "KredibilityPay",
     "ctaDesc": "Fale com nossa equipe e descubra como podemos acelerar sua operação de pagamentos na América Latina.",
-    "ctaBtn": "Fale Conosco"
+    "ctaBtn": "Comece Hoje"
   },
   "industrias": {
     "heroTitle1": "Indústrias",
@@ -131,7 +131,7 @@
     "heroDesc": "Soluções de pagamento projetadas especificamente para indústrias high-risk. Experiência comprovada em setores onde outros processadores se recusam a operar.",
     "desafios": "Desafios",
     "soluciones": "Soluções",
-    "hablarExperto": "Falar com Especialista",
+    "hablarExperto": "Comece Hoje",
     "industries": [
       {
         "title": "iGaming & Betting",
@@ -164,7 +164,7 @@
     ],
     "ctaTitle": "Sua indústria não está listada?",
     "ctaDesc": "Trabalhamos com dezenas de verticais high-risk. Entre em contato para uma solução personalizada.",
-    "ctaBtn": "Consultar Agora"
+    "ctaBtn": "Comece Hoje"
   },
   "cobertura": {
     "heroTitle1": "Cobertura",
@@ -195,7 +195,7 @@
     },
     "ctaTitle": "Procurando cobertura em outro país?",
     "ctaDesc": "Estamos expandindo constantemente. Entre em contato para conhecer nosso roadmap.",
-    "ctaBtn": "Solicitar Informação"
+    "ctaBtn": "Comece Hoje"
   },
   "desarrolladores": {
     "heroTitle1": "Documentação para",
@@ -268,7 +268,7 @@
     "ctaTitle1": "Pronto para trabalhar",
     "ctaTitle2": "juntos",
     "ctaDesc": "Junte-se a milhares de empresas que confiam na KredibilityPay para seus pagamentos em mercados emergentes.",
-    "ctaBtn": "Fale Conosco"
+    "ctaBtn": "Comece Hoje"
   },
   "contacto": {
     "heroBadge": "Comece Hoje",
@@ -297,8 +297,8 @@
       "Gestão de risco configurável",
       "Suporte técnico dedicado"
     ],
-    "formTitle": "Vamos conversar",
-    "formDesc": "Conte-nos sobre o seu negócio e mostraremos como a KredibilityPay pode ajudar.",
+    "formTitle": "Vamos Conversar",
+    "formDesc": "Conte-nos sobre o seu negócio e mostraremos como a KredibilityPay pode ajudá-lo a escalar pagamentos na LatAm.",
     "successTitle": "Mensagem enviada!",
     "successDesc": "Obrigado por entrar em contato. Nossa equipe analisará sua solicitação e responderá em breve.",
     "sendAnother": "Enviar outra mensagem",
@@ -306,13 +306,13 @@
     "labelEmail": "Email corporativo",
     "labelCompany": "Empresa",
     "labelVolume": "Volume mensal estimado",
-    "labelMessage": "Como podemos ajudar?",
+    "labelMessage": "Como podemos ajudá-lo?",
     "placeholderName": "Seu nome",
     "placeholderEmail": "voce@empresa.com",
     "placeholderCompany": "Nome da sua empresa",
-    "placeholderVolume": "Ex: $50K - $500K",
-    "placeholderMessage": "Conte-nos sobre seu negócio, os países onde opera e o que precisa...",
-    "submitBtn": "Solicitar Demo",
+    "placeholderVolume": "Selecione uma faixa",
+    "placeholderMessage": "Descreva seu negócio, mercados onde opera e o que precisa resolver…",
+    "submitBtn": "Comece Hoje",
     "submitting": "Enviando...",
     "toastRequired": "Por favor, preencha os campos obrigatórios",
     "toastSuccess": "Mensagem enviada!",

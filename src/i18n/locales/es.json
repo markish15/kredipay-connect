@@ -5,7 +5,7 @@
     "nosotros": "Nosotros",
     "contactanos": "Contáctanos",
     "documentacion": "Documentación",
-    "solicitarDemo": "Solicitar Demo"
+    "solicitarDemo": "Empieza Hoy"
   },
   "hero": {
     "slogan": "Building Kredibility, one payment at a time",
@@ -37,7 +37,7 @@
     "title1": "¿Listo para expandirte en",
     "title2": "LatAm",
     "description": "Contáctanos hoy y descubre cómo KredibilityPay puede simplificar tus pagos en Latinoamérica con una sola integración.",
-    "cta": "Contáctanos"
+    "cta": "Empieza Hoy"
   },
   "mercados": {
     "heroLabel": "Mercados",
@@ -69,7 +69,7 @@
     "ctaTitle1": "¿Listo para conquistar",
     "ctaTitle2": "LatAm",
     "ctaDesc": "Habla con nuestro equipo y descubre cómo activar pagos locales en los mercados que más importan para tu negocio.",
-    "ctaBtn": "Contáctanos"
+    "ctaBtn": "Empieza Hoy"
   },
   "soluciones": {
     "heroLabel": "Soluciones por industria",
@@ -123,7 +123,7 @@
     "ctaTitle1": "¿Listo para integrar",
     "ctaTitle2": "KredibilityPay",
     "ctaDesc": "Habla con nuestro equipo y descubre cómo podemos acelerar tu operación de pagos en Latinoamérica.",
-    "ctaBtn": "Contáctanos"
+    "ctaBtn": "Empieza Hoy"
   },
   "industrias": {
     "heroTitle1": "Industrias",
@@ -131,7 +131,7 @@
     "heroDesc": "Soluciones de pago diseñadas específicamente para industrias high-risk. Experiencia comprobada en sectores donde otros procesadores rechazan operar.",
     "desafios": "Desafíos",
     "soluciones": "Soluciones",
-    "hablarExperto": "Hablar con Experto",
+    "hablarExperto": "Empieza Hoy",
     "industries": [
       {
         "title": "iGaming & Betting",
@@ -164,7 +164,7 @@
     ],
     "ctaTitle": "¿Tu industria no está listada?",
     "ctaDesc": "Trabajamos con docenas de verticales high-risk. Contáctanos para una solución personalizada.",
-    "ctaBtn": "Consultar Ahora"
+    "ctaBtn": "Empieza Hoy"
   },
   "cobertura": {
     "heroTitle1": "Cobertura",
@@ -195,7 +195,7 @@
     },
     "ctaTitle": "¿Buscas cobertura en otro país?",
     "ctaDesc": "Estamos expandiendo constantemente. Contáctanos para conocer nuestro roadmap.",
-    "ctaBtn": "Solicitar Información"
+    "ctaBtn": "Empieza Hoy"
   },
   "desarrolladores": {
     "heroTitle1": "Documentación para",
@@ -268,7 +268,7 @@
     "ctaTitle1": "¿Listo para trabajar",
     "ctaTitle2": "juntos",
     "ctaDesc": "Únete a miles de empresas que confían en KredibilityPay para sus pagos en mercados emergentes.",
-    "ctaBtn": "Contáctanos"
+    "ctaBtn": "Empieza Hoy"
   },
   "contacto": {
     "heroBadge": "Empieza Hoy",
@@ -298,7 +298,7 @@
       "Soporte técnico dedicado"
     ],
     "formTitle": "Hablemos",
-    "formDesc": "Cuéntanos sobre tu negocio y te mostramos cómo KredibilityPay puede ayudarte.",
+    "formDesc": "Cuéntanos sobre tu negocio y te mostraremos cómo KredibilityPay puede ayudarte a escalar pagos en LatAm.",
     "successTitle": "¡Mensaje enviado!",
     "successDesc": "Gracias por contactarnos. Nuestro equipo revisará tu solicitud y te responderá a la brevedad.",
     "sendAnother": "Enviar otro mensaje",
@@ -310,9 +310,9 @@
     "placeholderName": "Tu nombre",
     "placeholderEmail": "tu@empresa.com",
     "placeholderCompany": "Nombre de tu empresa",
-    "placeholderVolume": "Ej: $50K - $500K",
-    "placeholderMessage": "Cuéntanos sobre tu negocio, los países donde operas y qué necesitas...",
-    "submitBtn": "Solicitar Demo",
+    "placeholderVolume": "Selecciona un rango",
+    "placeholderMessage": "Describe tu negocio, mercados donde operas y qué necesitas resolver…",
+    "submitBtn": "Empieza Hoy",
     "submitting": "Enviando...",
     "toastRequired": "Por favor completa los campos requeridos",
     "toastSuccess": "¡Mensaje enviado!",

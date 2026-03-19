@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { Button } from '@/components/ui/button';
 import { Menu, X, Globe } from 'lucide-react';
@@ -14,6 +14,8 @@ import fullLogo from '@/assets/kredibilitypay-logo-full.svg';
 const Header = () => {
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const location = useLocation();
+  const navigate = useNavigate();
 
   const navigation = [
     { name: t('header.soluciones'), href: '/soluciones' },
@@ -24,6 +26,15 @@ const Header = () => {
 
   const changeLanguage = (lang: string) => {
     i18n.changeLanguage(lang);
+  };
+
+  const handleDemoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/contacto') {
+      document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/contacto#demo-form');
+    }
   };
 
   return (
@@ -85,11 +96,11 @@ const Header = () => {
                 </DropdownMenuItem>
               </DropdownMenuContent>
             </DropdownMenu>
-            <Link to="/contacto">
+            <a href="/contacto#demo-form" onClick={handleDemoClick}>
               <Button size="sm" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 {t('header.solicitarDemo')}
               </Button>
-            </Link>
+            </a>
           </div>
 
           {/* Mobile menu button */}
@@ -142,11 +153,11 @@ const Header = () => {
                     </DropdownMenuItem>
                   </DropdownMenuContent>
                 </DropdownMenu>
-                <Link to="/contacto">
+                <a href="/contacto#demo-form" onClick={(e) => { handleDemoClick(e); setIsMenuOpen(false); }}>
                   <Button className="w-full bg-primary text-primary-foreground hover:bg-primary/90">
                     {t('header.solicitarDemo')}
                   </Button>
-                </Link>
+                </a>
               </div>
             </div>
           </div>
