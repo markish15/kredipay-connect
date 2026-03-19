@@ -1,10 +1,21 @@
 import { Button } from '@/components/ui/button';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import { ArrowRight } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const Hero = () => {
   const { t } = useTranslation();
+  const location = useLocation();
+  const navigate = useNavigate();
+
+  const handleDemoClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    if (location.pathname === '/contacto') {
+      document.getElementById('demo-form')?.scrollIntoView({ behavior: 'smooth' });
+    } else {
+      navigate('/contacto#demo-form');
+    }
+  };
 
   return (
     <section className="relative py-24 lg:py-36 overflow-hidden">
@@ -30,12 +41,12 @@ const Hero = () => {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
-            <Link to="/contacto">
+            <a href="/contacto#demo-form" onClick={handleDemoClick}>
               <Button size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90 text-lg px-10 py-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300">
                 {t('hero.ctaPrimary')}
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
-            </Link>
+            </a>
             <Link to="/soluciones">
               <Button variant="outline" size="lg" className="text-lg px-10 py-6 rounded-2xl border-2 hover:bg-muted hover:shadow-md transition-all duration-300">
                 {t('hero.ctaSecondary')}
