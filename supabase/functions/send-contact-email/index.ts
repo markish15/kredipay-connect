@@ -43,8 +43,8 @@ serve(async (req) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        from: 'KredibilityPay <onboarding@resend.dev>',
-        to: ['marco.vujosevic@googlemail.com'],
+        from: 'KredibilityPay <noreply@kredibilitypay.com>',
+        to: ['sales@kredibilitypay.com'],
         subject: `Nuevo contacto: ${name} - ${company || 'Sin empresa'}`,
         html: emailHtml,
         reply_to: email,
