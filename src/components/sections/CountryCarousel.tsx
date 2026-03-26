@@ -69,7 +69,7 @@ const countrySlides = [
     insight: 'Líder en inclusión financiera digital del Cono Sur.',
   },
   {
-    name: 'Paraguay', flag: '🇵🇾', image: paraguayImg,
+    name: 'Paraguay', code: 'py', image: paraguayImg,
     stats: [{ value: '$1B', label: 'eCommerce' }, { value: '7.4M', label: 'Población' }, { value: '+30%', label: 'Crec. digital' }],
     methods: ['Transferencia', 'Giros Tigo', 'Tarjetas locales'],
     insight: 'Billeteras móviles creciendo +30% año tras año.',
