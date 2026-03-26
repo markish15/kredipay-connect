@@ -51,7 +51,7 @@ const countrySlides = [
     insight: 'Mayor penetración bancaria de LatAm con 87%.',
   },
   {
-    name: 'Perú', flag: '🇵🇪', image: peruImg,
+    name: 'Perú', code: 'pe', image: peruImg,
     stats: [{ value: '$8B', label: 'eCommerce' }, { value: '15M+', label: 'Usuarios Yape' }, { value: '34M', label: 'Población' }],
     methods: ['Yape', 'PagoEfectivo', 'Transferencia'],
     insight: 'Yape: +15M de usuarios activos. Billetera #1.',
