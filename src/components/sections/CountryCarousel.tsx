@@ -27,7 +27,7 @@ const countrySlides = [
     insight: 'Pix procesa +$250B/mes. Mercado #1 en LatAm.',
   },
   {
-    name: 'México', flag: '🇲🇽', image: mexicoImg,
+    name: 'México', code: 'mx', image: mexicoImg,
     stats: [{ value: '$37B', label: 'eCommerce' }, { value: '22K+', label: 'Sucursales OXXO' }, { value: '+40%', label: 'Crec. SPEI' }],
     methods: ['OXXO', 'SPEI', 'Tarjetas locales'],
     insight: 'OXXO tiene 22K+ sucursales. SPEI crece 40% anual.',
