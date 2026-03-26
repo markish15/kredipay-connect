@@ -24,7 +24,7 @@ const Footer = () => {
         <div className="flex flex-col md:flex-row items-center justify-between gap-4">
           {/* Logo */}
           <Link to="/" className="flex-shrink-0">
-            <img src={logo} alt="KredibilityPay" className="h-8" />
+            <img src={logo} alt="KredibilityPay" className="h-[150px]" />
           </Link>
 
           {/* Nav + email */}
