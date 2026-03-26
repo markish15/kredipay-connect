@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { useTranslation } from 'react-i18next';
