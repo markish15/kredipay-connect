@@ -45,7 +45,7 @@ const countrySlides = [
     insight: 'MercadoPago lidera fintech con +40M de wallets activas.',
   },
   {
-    name: 'Chile', flag: '🇨🇱', image: chileImg,
+    name: 'Chile', code: 'cl', image: chileImg,
     stats: [{ value: '$12B', label: 'eCommerce' }, { value: '87%', label: 'Bancarización' }, { value: '19M', label: 'Población' }],
     methods: ['Webpay', 'Khipu', 'ServiPag'],
     insight: 'Mayor penetración bancaria de LatAm con 87%.',
