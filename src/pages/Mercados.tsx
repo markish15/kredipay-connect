@@ -65,7 +65,7 @@ const Mercados = () => {
             <p className="text-sm font-semibold tracking-widest uppercase text-[#A6FFF7] mb-4">
               {t('mercados.heroLabel')}
             </p>
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-card mb-4 leading-normal">
+            <h1 className="text-4xl lg:text-6xl font-bold text-card mb-6 leading-normal">
               {t('mercados.heroTitle1')} <span className="text-primary">{t('mercados.heroTitle2')}</span> {t('mercados.heroTitle3')}
             </h1>
             <p className="text-lg text-card/80 max-w-2xl mx-auto leading-relaxed">
