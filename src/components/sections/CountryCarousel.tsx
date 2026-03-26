@@ -93,7 +93,7 @@ const countrySlides = [
     insight: 'Yappy domina pagos móviles con adopción masiva.',
   },
   {
-    name: 'Guatemala', flag: '🇬🇹', image: guatemalaImg,
+    name: 'Guatemala', code: 'gt', image: guatemalaImg,
     stats: [{ value: '$1.5B', label: 'eCommerce' }, { value: '17M', label: 'Población' }, { value: '+28%', label: 'Crec. digital' }],
     methods: ['Transferencia', 'Efectivo', 'Tarjetas locales'],
     insight: 'Mercado en expansión con fuerte adopción móvil.',
