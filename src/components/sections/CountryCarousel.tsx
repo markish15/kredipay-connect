@@ -39,7 +39,7 @@ const countrySlides = [
     insight: 'PSE domina pagos online con 85% de penetración digital.',
   },
   {
-    name: 'Argentina', flag: '🇦🇷', image: argentinaImg,
+    name: 'Argentina', code: 'ar', image: argentinaImg,
     stats: [{ value: '$15B', label: 'eCommerce' }, { value: '40M+', label: 'Wallets' }, { value: '46M', label: 'Población' }],
     methods: ['MercadoPago', 'Rapipago', 'PagoFácil'],
     insight: 'MercadoPago lidera fintech con +40M de wallets activas.',
