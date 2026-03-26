@@ -87,7 +87,7 @@ const countrySlides = [
     insight: 'SINPE Móvil revoluciona pagos P2P en el país.',
   },
   {
-    name: 'Panamá', flag: '🇵🇦', image: panamaImg,
+    name: 'Panamá', code: 'pa', image: panamaImg,
     stats: [{ value: '$2.5B', label: 'eCommerce' }, { value: '4.4M', label: 'Población' }, { value: '+20%', label: 'Crec. digital' }],
     methods: ['Yappy', 'Transferencia', 'Tarjetas locales'],
     insight: 'Yappy domina pagos móviles con adopción masiva.',
