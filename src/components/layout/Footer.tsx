@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Mail } from 'lucide-react';
 import logo from '@/assets/kredibilitypay-logo-full.svg';
 
 const Footer = () => {
@@ -20,70 +19,45 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-card border-t border-border">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 items-start">
-          {/* Logo & email */}
-          <div className="space-y-4">
-            <Link to="/">
-              <img src={logo} alt="KredibilityPay" className="h-10" />
-            </Link>
-            <a
-              href="mailto:sales@kredibilitypay.com"
-              className="flex items-center gap-2 text-sm text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Mail className="h-4 w-4" />
+    <footer className="border-t border-border py-6">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+          {/* Logo */}
+          <Link to="/" className="flex-shrink-0">
+            <img src={logo} alt="KredibilityPay" className="h-8" />
+          </Link>
+
+          {/* Nav + email */}
+          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+            {navLinks.map((link) => (
+              <Link key={link.to} to={link.to} className="hover:text-primary transition-colors">
+                {link.label}
+              </Link>
+            ))}
+            <span className="hidden md:inline text-border">|</span>
+            <a href="mailto:sales@kredibilitypay.com" className="hover:text-primary transition-colors">
               sales@kredibilitypay.com
             </a>
-          </div>
+          </nav>
 
-          {/* Nav links */}
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
-              {t('footer.navigation')}
-            </h4>
-            <ul className="space-y-2">
-              {navLinks.map((link) => (
-                <li key={link.to}>
-                  <Link
-                    to={link.to}
-                    className="text-sm text-muted-foreground hover:text-primary transition-colors"
-                  >
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          {/* Language */}
-          <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-muted-foreground mb-4">
-              {t('footer.language')}
-            </h4>
-            <div className="flex gap-3">
+          {/* Language + copyright */}
+          <div className="flex items-center gap-4 text-xs text-muted-foreground">
+            <div className="flex gap-2">
               {languages.map((lang) => (
                 <button
                   key={lang.code}
                   onClick={() => i18n.changeLanguage(lang.code)}
-                  className={`text-sm font-medium transition-colors ${
-                    i18n.language === lang.code
-                      ? 'text-primary'
-                      : 'text-muted-foreground hover:text-foreground'
+                  className={`font-medium transition-colors ${
+                    i18n.language === lang.code ? 'text-primary' : 'hover:text-foreground'
                   }`}
                 >
                   {lang.label}
                 </button>
               ))}
             </div>
+            <span className="text-border">|</span>
+            <span>© {new Date().getFullYear()} KredibilityPay</span>
           </div>
-        </div>
-
-        {/* Divider & copyright */}
-        <div className="border-t border-border mt-10 pt-6 text-center">
-          <p className="text-xs text-muted-foreground">
-            © {new Date().getFullYear()} KredibilityPay. {t('footer.rights')}
-          </p>
         </div>
       </div>
     </footer>
