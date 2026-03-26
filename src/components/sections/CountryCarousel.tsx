@@ -33,7 +33,7 @@ const countrySlides = [
     insight: 'OXXO tiene 22K+ sucursales. SPEI crece 40% anual.',
   },
   {
-    name: 'Colombia', flag: '🇨🇴', image: colombiaImg,
+    name: 'Colombia', code: 'co', image: colombiaImg,
     stats: [{ value: '$14B', label: 'eCommerce' }, { value: '85%', label: 'Penetración PSE' }, { value: '52M', label: 'Población' }],
     methods: ['PSE', 'Efecty', 'Nequi'],
     insight: 'PSE domina pagos online con 85% de penetración digital.',
