@@ -75,7 +75,7 @@ const countrySlides = [
     insight: 'Billeteras móviles creciendo +30% año tras año.',
   },
   {
-    name: 'Bolivia', flag: '🇧🇴', image: boliviaImg,
+    name: 'Bolivia', code: 'bo', image: boliviaImg,
     stats: [{ value: '$0.8B', label: 'eCommerce' }, { value: '12M', label: 'Población' }, { value: '+35%', label: 'Crec. digital' }],
     methods: ['QR Simple', 'Transferencia', 'Tigo Money'],
     insight: 'QR Simple impulsa la inclusión financiera digital.',
