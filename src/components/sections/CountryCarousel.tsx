@@ -99,7 +99,7 @@ const countrySlides = [
     insight: 'Mercado en expansión con fuerte adopción móvil.',
   },
   {
-    name: 'Rep. Dominicana', flag: '🇩🇴', image: dominicanaImg,
+    name: 'Rep. Dominicana', code: 'do', image: dominicanaImg,
     stats: [{ value: '$2B', label: 'eCommerce' }, { value: '11M', label: 'Población' }, { value: '+24%', label: 'Crec. digital' }],
     methods: ['Transferencia', 'Tarjetas locales', 'Efectivo'],
     insight: 'Líder del Caribe en comercio electrónico.',
