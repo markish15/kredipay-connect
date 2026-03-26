@@ -160,6 +160,7 @@ const Cobertura = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

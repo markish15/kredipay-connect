@@ -234,6 +234,7 @@ console.log('Status:', charge.status);`;
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

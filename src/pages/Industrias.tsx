@@ -135,6 +135,7 @@ const Industrias = () => {
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

@@ -212,6 +212,7 @@ const Soluciones = () => {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

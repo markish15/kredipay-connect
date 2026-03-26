@@ -123,6 +123,7 @@ const Nosotros = () => {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
