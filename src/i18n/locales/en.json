@@ -262,7 +262,7 @@
       { "question": "In which countries do you operate?", "answer": "We operate in over 15 countries, with a strong presence in Brazil, Mexico, Colombia, Chile, Peru, Argentina, and Uruguay." },
       { "question": "How long does integration take?", "answer": "Basic integration can be completed in 1-2 days with our SDKs and documentation. For more complex enterprise integrations, our technical team accompanies you every step." },
       { "question": "What payment methods do you support?", "answer": "We support over 250 methods including Pix, OXXO, PSE, SPEI, Boleto, Yape, MercadoPago, local bank transfers, local and international cards, digital wallets, and cash payments." },
-      { "question": "How do you handle compliance and regulation?", "answer": "We are PCI DSS Level 1 certified, comply with KYC/AML in each jurisdiction, and hold local licenses where required. Our compliance team continuously monitors regulations." },
+      { "question": "How do you handle compliance and regulation?", "answer": "We comply with KYC/AML in each jurisdiction, and hold local licenses where required. Our compliance team continuously monitors regulations." },
       { "question": "Do you offer pay-outs in addition to pay-ins?", "answer": "Yes. Our platform supports pay-ins (collections) and pay-outs (disbursements) with the same API. You can pay suppliers, affiliates, or process refunds in local currency." }
     ],
     "ctaTitle1": "Ready to work",
