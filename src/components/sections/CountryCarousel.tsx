@@ -81,7 +81,7 @@ const countrySlides = [
     insight: 'QR Simple impulsa la inclusión financiera digital.',
   },
   {
-    name: 'Costa Rica', flag: '🇨🇷', image: costaricaImg,
+    name: 'Costa Rica', code: 'cr', image: costaricaImg,
     stats: [{ value: '$2B', label: 'eCommerce' }, { value: '5.2M', label: 'Población' }, { value: '68%', label: 'Bancarización' }],
     methods: ['SINPE Móvil', 'Transferencia', 'Tarjetas locales'],
     insight: 'SINPE Móvil revoluciona pagos P2P en el país.',
