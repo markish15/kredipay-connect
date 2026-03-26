@@ -57,7 +57,7 @@ const countrySlides = [
     insight: 'Yape: +15M de usuarios activos. Billetera #1.',
   },
   {
-    name: 'Ecuador', flag: '🇪🇨', image: ecuadorImg,
+    name: 'Ecuador', code: 'ec', image: ecuadorImg,
     stats: [{ value: '$3.5B', label: 'eCommerce' }, { value: '18M', label: 'Población' }, { value: '+22%', label: 'Crec. digital' }],
     methods: ['Transferencia', 'Efectivo', 'Tarjetas locales'],
     insight: 'Economía dolarizada con rápida adopción de pagos digitales.',
