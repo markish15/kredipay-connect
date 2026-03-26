@@ -1,4 +1,5 @@
 import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import PaymentMethods from '@/components/sections/PaymentMethods';
 import CoverageMap from '@/components/sections/CoverageMap';
