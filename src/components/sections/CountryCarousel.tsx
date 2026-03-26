@@ -63,7 +63,7 @@ const countrySlides = [
     insight: 'Economía dolarizada con rápida adopción de pagos digitales.',
   },
   {
-    name: 'Uruguay', flag: '🇺🇾', image: uruguayImg,
+    name: 'Uruguay', code: 'uy', image: uruguayImg,
     stats: [{ value: '$1.2B', label: 'eCommerce' }, { value: '74%', label: 'Inclusión fin.' }, { value: '+25%', label: 'Crec. digital' }],
     methods: ['Abitab', 'RedPagos', 'Tarjetas locales'],
     insight: 'Líder en inclusión financiera digital del Cono Sur.',
