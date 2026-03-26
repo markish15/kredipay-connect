@@ -1,4 +1,5 @@
 import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -233,6 +234,7 @@ console.log('Status:', charge.status);`;
           </div>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

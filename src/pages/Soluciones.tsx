@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import Header from '@/components/layout/Header';
+import Footer from '@/components/layout/Footer';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { useTranslation } from 'react-i18next';
@@ -211,6 +212,7 @@ const Soluciones = () => {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };
