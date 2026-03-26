@@ -105,7 +105,7 @@ const countrySlides = [
     insight: 'Líder del Caribe en comercio electrónico.',
   },
   {
-    name: 'El Salvador', flag: '🇸🇻', image: elsalvadorImg,
+    name: 'El Salvador', code: 'sv', image: elsalvadorImg,
     stats: [{ value: '$0.9B', label: 'eCommerce' }, { value: '6.5M', label: 'Población' }, { value: '+32%', label: 'Crec. digital' }],
     methods: ['Transferencia', 'Chivo Wallet', 'Efectivo'],
     insight: 'Pionero en adopción de pagos digitales en Centroamérica.',
