@@ -192,6 +192,7 @@ const Mercados = () => {
           </Link>
         </div>
       </section>
+      <Footer />
     </div>
   );
 };

@@ -320,4 +320,9 @@
     "toastError": "Error sending",
     "toastErrorDesc": "Please try again later."
   }
+  ,"footer": {
+    "navigation": "Navigation",
+    "language": "Language",
+    "rights": "All rights reserved."
+  }
 }

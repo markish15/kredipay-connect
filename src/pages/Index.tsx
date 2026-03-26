@@ -15,6 +15,7 @@ const Index = () => {
         <CoverageMap />
         <HomeCTA />
       </main>
+      <Footer />
     </div>
   );
 };
