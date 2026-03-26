@@ -157,8 +157,12 @@ const CountryCarousel = () => {
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/70 via-transparent to-transparent" />
 
         {/* Country name + flag top-left */}
-        <div className="absolute top-5 left-5 flex items-center gap-2 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-xl shadow-lg">
-          <span className="text-2xl">{slide.flag}</span>
+        <div className="absolute top-5 left-5 flex items-center gap-3 bg-card/90 backdrop-blur-sm px-4 py-2 rounded-xl shadow-lg">
+          <img
+            src={`https://flagcdn.com/w80/${slide.code}.png`}
+            alt={`Bandera de ${slide.name}`}
+            className="w-8 h-6 object-cover rounded shadow-sm"
+          />
           <span className="text-lg font-bold text-foreground">{slide.name}</span>
         </div>
 
