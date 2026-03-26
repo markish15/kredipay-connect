@@ -21,7 +21,7 @@ import uruguayImg from '@/assets/carousel-uruguay.jpg';
 
 const countrySlides = [
   {
-    name: 'Brasil', flag: '🇧🇷', image: brasilImg,
+    name: 'Brasil', code: 'br', image: brasilImg,
     stats: [{ value: '$49B', label: 'eCommerce' }, { value: '215M', label: 'Población' }, { value: '#1', label: 'Mercado LatAm' }],
     methods: ['Pix', 'Boleto', 'Tarjetas locales'],
     insight: 'Pix procesa +$250B/mes. Mercado #1 en LatAm.',
