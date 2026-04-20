@@ -1,4 +1,7 @@
 {
+  "floatingContact": {
+    "label": "Contato"
+  },
   "header": {
     "soluciones": "Soluções",
     "mercados": "Mercados",
