@@ -1,5 +1,5 @@
 import { useLocation, useNavigate } from 'react-router-dom';
-import { MessageCircle } from 'lucide-react';
+import { Mail } from 'lucide-react';
 import { useTranslation } from 'react-i18next';
 
 const FloatingContactButton = () => {
@@ -17,9 +17,9 @@ const FloatingContactButton = () => {
     <button
       onClick={handleClick}
       aria-label={t('floatingContact.label', 'Contacto')}
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-primary text-primary-foreground hover:bg-primary/90 px-5 py-3 rounded-full shadow-lg hover:shadow-xl transition-all hover:scale-105 font-medium"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-card/90 backdrop-blur-sm text-foreground border border-border hover:border-primary/40 hover:text-primary px-4 py-2.5 rounded-full shadow-md hover:shadow-lg transition-all text-sm font-medium"
     >
-      <MessageCircle className="h-5 w-5" />
+      <Mail className="h-4 w-4" />
       <span>{t('floatingContact.label', 'Contacto')}</span>
     </button>
   );
