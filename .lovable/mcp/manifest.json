@@ -1,0 +1,166 @@
+{
+  "version": 1,
+  "sdk_version": "0.22.2",
+  "path": "/functions/v1/mcp",
+  "auth": {
+    "type": "oauth",
+    "issuer": "https://nzquideigitrirpmvjqw.supabase.co/auth/v1",
+    "accepted_audiences": [
+      "authenticated"
+    ]
+  },
+  "mcp": {
+    "server": {
+      "name": "kredibilitypay-mcp",
+      "version": "0.1.0",
+      "title": "KredibilityPay"
+    },
+    "tools": [
+      {
+        "name": "submit_demo_request",
+        "title": "Submit demo request",
+        "description": "Submit a demo / contact request to KredibilityPay's sales team on behalf of the signed-in user. Also saves the request to the user's history.",
+        "annotations": {
+          "readOnlyHint": false,
+          "idempotentHint": false,
+          "openWorldHint": true
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "minLength": 1,
+              "description": "Full name of the contact."
+            },
+            "email": {
+              "type": "string",
+              "format": "email",
+              "description": "Business email of the contact."
+            },
+            "company": {
+              "type": "string",
+              "description": "Company name."
+            },
+            "message": {
+              "type": "string",
+              "minLength": 1,
+              "description": "What they want to solve, markets, expected volume, etc."
+            },
+            "monthly_volume": {
+              "type": "string",
+              "description": "Estimated monthly transaction volume, e.g. '$10k-$50k', '$1M+'."
+            }
+          },
+          "required": [
+            "name",
+            "email",
+            "message"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "list_demo_requests",
+        "title": "List my demo requests",
+        "description": "List the signed-in user's own demo / contact requests, most recent first.",
+        "annotations": {
+          "readOnlyHint": true,
+          "idempotentHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "limit": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 100,
+              "description": "Max rows (default 20)."
+            }
+          },
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "update_demo_request",
+        "title": "Update a demo request",
+        "description": "Update fields of one of the signed-in user's own demo requests. Only the fields provided are updated.",
+        "annotations": {
+          "readOnlyHint": false,
+          "idempotentHint": true,
+          "destructiveHint": false,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid",
+              "description": "ID of the demo request to update."
+            },
+            "name": {
+              "type": "string",
+              "minLength": 1
+            },
+            "email": {
+              "type": "string",
+              "format": "email"
+            },
+            "company": {
+              "type": "string"
+            },
+            "message": {
+              "type": "string",
+              "minLength": 1
+            },
+            "monthly_volume": {
+              "type": "string"
+            },
+            "status": {
+              "type": "string"
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      },
+      {
+        "name": "delete_demo_request",
+        "title": "Delete a demo request",
+        "description": "Delete one of the signed-in user's own demo requests. This cannot be undone.",
+        "annotations": {
+          "readOnlyHint": false,
+          "idempotentHint": true,
+          "destructiveHint": true,
+          "openWorldHint": false
+        },
+        "inputSchema": {
+          "type": "object",
+          "properties": {
+            "id": {
+              "type": "string",
+              "format": "uuid",
+              "description": "ID of the demo request to delete."
+            }
+          },
+          "required": [
+            "id"
+          ],
+          "additionalProperties": false,
+          "$schema": "http://json-schema.org/draft-07/schema#"
+        },
+        "outputSchema": null
+      }
+    ]
+  }
+}
