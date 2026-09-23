@@ -326,6 +326,8 @@
   ,"footer": {
     "navigation": "Navigation",
     "language": "Language",
-    "rights": "All rights reserved."
+    "rights": "All rights reserved.",
+    "terms": "Terms and conditions",
+    "privacy": "Privacy notice"
   }
 }
