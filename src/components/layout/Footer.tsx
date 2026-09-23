@@ -59,6 +59,14 @@ const Footer = () => {
             <span>© {new Date().getFullYear()} KredibilityPay</span>
           </div>
         </div>
+        <div className="mt-3 flex items-center justify-center gap-4 border-t border-border/60 pt-3 text-[11px] text-muted-foreground/80 md:justify-end">
+          <Link to="/terminos" className="transition-colors hover:text-primary">
+            {t('footer.terms')}
+          </Link>
+          <Link to="/aviso-de-privacidad" className="transition-colors hover:text-primary">
+            {t('footer.privacy')}
+          </Link>
+        </div>
       </div>
     </footer>
   );

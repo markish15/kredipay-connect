@@ -12,6 +12,7 @@ import Nosotros from "./pages/Nosotros";
 import Contacto from "./pages/Contacto";
 import Auth from "./pages/Auth";
 import OAuthConsent from "./pages/OAuthConsent";
+import LegalDocument from "./pages/LegalDocument";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -31,6 +32,8 @@ const App = () => (
           <Route path="/contacto" element={<Contacto />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/.lovable/oauth/consent" element={<OAuthConsent />} />
+          <Route path="/terminos" element={<LegalDocument document="terms" />} />
+          <Route path="/aviso-de-privacidad" element={<LegalDocument document="privacy" />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
