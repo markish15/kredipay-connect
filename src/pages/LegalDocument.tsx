@@ -2,6 +2,7 @@ import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import { legalContent, type LegalDocument as LegalDocumentContent } from '@/content/legalContent';
 import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
 
 type LegalDocumentProps = {
   document: 'terms' | 'privacy';
@@ -12,6 +13,23 @@ const LegalDocument = ({ document }: LegalDocumentProps) => {
   const language = i18n.resolvedLanguage?.split('-')[0];
   const locale = language === 'en' || language === 'pt' ? language : 'es';
   const content: LegalDocumentContent = legalContent[locale][document];
+
+  const renderParagraph = (paragraph: string) => {
+    const privacyPath = '/aviso-de-privacidad';
+    const parts = paragraph.split(privacyPath);
+
+    if (parts.length === 1) return paragraph;
+
+    return (
+      <>
+        {parts[0]}
+        <Link to={privacyPath} className="font-medium text-foreground underline decoration-primary underline-offset-4 transition-colors hover:text-primary">
+          {privacyPath}
+        </Link>
+        {parts.slice(1).join(privacyPath)}
+      </>
+    );
+  };
 
   return (
     <div className="min-h-screen bg-background">
@@ -36,7 +54,7 @@ const LegalDocument = ({ document }: LegalDocumentProps) => {
                 <h2 className="mb-4 text-xl font-semibold text-foreground sm:text-2xl">{section.title}</h2>
                 {section.paragraphs?.map((paragraph) => (
                   <p key={paragraph} className="mb-4 text-base leading-7 text-muted-foreground last:mb-0">
-                    {paragraph}
+                    {renderParagraph(paragraph)}
                   </p>
                 ))}
                 {section.bullets && (
