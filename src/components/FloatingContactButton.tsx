@@ -17,9 +17,9 @@ const FloatingContactButton = () => {
     <button
       onClick={handleClick}
       aria-label={t('floatingContact.label', 'Contacto')}
-      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 bg-card/90 backdrop-blur-sm text-foreground border border-border hover:border-primary/40 hover:text-primary px-5 py-2.5 rounded-2xl shadow-md hover:shadow-lg transition-all text-sm font-medium"
+      className="fixed bottom-6 right-6 z-50 flex items-center gap-2 rounded-md border border-neutral-dark/10 bg-card/90 px-4 py-2.5 text-sm font-medium text-neutral-dark shadow-[0_10px_30px_-12px_hsl(var(--neutral-dark)/0.4)] backdrop-blur transition-colors hover:border-turquoise-dark/40"
     >
-      <Mail className="h-4 w-4" />
+      <Mail className="h-4 w-4 text-turquoise-dark" />
       <span>{t('floatingContact.label', 'Contacto')}</span>
     </button>
   );

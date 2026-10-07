@@ -119,10 +119,49 @@ All colors MUST be HSL for proper theming.
   }
 
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans antialiased;
+    font-feature-settings: "ss01", "cv11";
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-heading tracking-tight;
+  }
+}
+
+@layer utilities {
+  /* Hairline engineering grid used behind hero and CTA sections */
+  .bg-grid {
+    background-image:
+      linear-gradient(to right, hsl(var(--neutral-dark) / 0.07) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--neutral-dark) / 0.07) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .bg-grid-light {
+    background-image:
+      linear-gradient(to right, hsl(var(--neutral-light) / 0.06) 1px, transparent 1px),
+      linear-gradient(to bottom, hsl(var(--neutral-light) / 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  .mask-radial {
+    mask-image: radial-gradient(ellipse 70% 60% at 50% 40%, #000 30%, transparent 100%);
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .motion-safe-only {
+    display: none;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
