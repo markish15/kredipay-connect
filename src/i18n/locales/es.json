@@ -42,6 +42,16 @@
     "description": "Contáctanos hoy y descubre cómo KredibilityPay puede simplificar tus pagos en Latinoamérica con una sola integración.",
     "cta": "Empieza Hoy"
   },
+  "home": {
+    "methodsEyebrow": "Métodos de pago",
+    "coverageEyebrow": "Cobertura",
+    "ctaEyebrow": "Empieza hoy",
+    "visualHub": "Una sola integración",
+    "visualPayment": "Pago recibido",
+    "visualApproved": "Aprobado",
+    "visualCurrencies": "Divisas",
+    "activeMarkets": "Mercados activos"
+  },
   "mercados": {
     "heroLabel": "Mercados",
     "heroTitle1": "La",
@@ -328,6 +338,8 @@
     "language": "Idioma",
     "rights": "Todos los derechos reservados.",
     "terms": "Términos y condiciones",
-    "privacy": "Aviso de privacidad"
+    "privacy": "Aviso de privacidad",
+    "legal": "Legal",
+    "contact": "Contacto"
   }
 }

@@ -12,60 +12,94 @@ const Footer = () => {
     { label: t('header.contactanos'), to: '/contacto' },
   ];
 
+  const legalLinks = [
+    { label: t('footer.terms'), to: '/terminos' },
+    { label: t('footer.privacy'), to: '/aviso-de-privacidad' },
+  ];
+
   const languages = [
     { code: 'es', label: 'ES' },
     { code: 'en', label: 'EN' },
     { code: 'pt', label: 'PT' },
   ];
 
+  const columnTitle = 'font-mono text-[11px] uppercase tracking-wider text-neutral-dark/45';
+  const linkClass = 'text-sm text-neutral-dark/75 transition-colors hover:text-neutral-dark';
+
   return (
-    <footer className="border-t border-border py-6">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-          {/* Logo */}
-          <Link to="/" className="flex-shrink-0">
-            <img src={logo} alt="KredibilityPay" className="h-[150px]" />
-          </Link>
+    <footer className="border-t border-neutral-dark/10 bg-background">
+      <div className="container mx-auto px-4 pb-8 pt-16 sm:px-6 lg:px-8">
+        <div className="grid gap-12 md:grid-cols-[1.5fr_1fr_1fr_1fr]">
+          <div>
+            <Link to="/" className="inline-block" aria-label="KredibilityPay">
+              <img src={logo} alt="KredibilityPay" width={172} height={48} className="h-12 w-[172px]" />
+            </Link>
+            <p className="mt-4 max-w-xs font-mono text-xs uppercase leading-relaxed tracking-wider text-neutral-dark/55">
+              {t('hero.slogan')}
+            </p>
+          </div>
 
-          {/* Nav + email */}
-          <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
-            {navLinks.map((link) => (
-              <Link key={link.to} to={link.to} className="hover:text-primary transition-colors">
-                {link.label}
-              </Link>
-            ))}
-            <span className="hidden md:inline text-border">|</span>
-            <a href="mailto:sales@kredibilitypay.com" className="hover:text-primary transition-colors">
-              sales@kredibilitypay.com
-            </a>
-          </nav>
+          <div>
+            <h3 className={columnTitle}>{t('footer.navigation')}</h3>
+            <ul className="mt-4 space-y-3">
+              {navLinks.map((link) => (
+                <li key={link.to}>
+                  <Link to={link.to} className={linkClass}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
 
-          {/* Language + copyright */}
-          <div className="flex items-center gap-4 text-xs text-muted-foreground">
-            <div className="flex gap-2">
+          <div>
+            <h3 className={columnTitle}>{t('footer.contact')}</h3>
+            <ul className="mt-4 space-y-3">
+              <li>
+                <a href="mailto:sales@kredibilitypay.com" className={linkClass}>
+                  sales@kredibilitypay.com
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className={columnTitle}>{t('footer.legal')}</h3>
+            <ul className="mt-4 space-y-3">
+              {legalLinks.map((link) => (
+                <li key={link.to}>
+                  <Link to={link.to} className={linkClass}>
+                    {link.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        <div className="mt-16 flex flex-col-reverse items-start justify-between gap-4 border-t border-neutral-dark/10 pt-6 sm:flex-row sm:items-center">
+          <span className="font-mono text-[11px] text-neutral-dark/50">
+            © {new Date().getFullYear()} KredibilityPay. {t('footer.rights')}
+          </span>
+          <div className="flex items-center gap-3">
+            <span className={columnTitle}>{t('footer.language')}</span>
+            <div className="flex gap-1 font-mono text-[11px]">
               {languages.map((lang) => (
                 <button
                   key={lang.code}
                   onClick={() => i18n.changeLanguage(lang.code)}
-                  className={`font-medium transition-colors ${
-                    i18n.language === lang.code ? 'text-primary' : 'hover:text-foreground'
+                  aria-pressed={i18n.language === lang.code}
+                  className={`rounded px-2 py-1 transition-colors ${
+                    i18n.language === lang.code
+                      ? 'bg-neutral-dark text-neutral-light'
+                      : 'text-neutral-dark/60 hover:text-neutral-dark'
                   }`}
                 >
                   {lang.label}
                 </button>
               ))}
             </div>
-            <span className="text-border">|</span>
-            <span>© {new Date().getFullYear()} KredibilityPay</span>
           </div>
-        </div>
-        <div className="mt-3 flex items-center justify-center gap-4 border-t border-border/60 pt-3 text-[11px] text-muted-foreground/80 md:justify-end">
-          <Link to="/terminos" className="transition-colors hover:text-primary">
-            {t('footer.terms')}
-          </Link>
-          <Link to="/aviso-de-privacidad" className="transition-colors hover:text-primary">
-            {t('footer.privacy')}
-          </Link>
         </div>
       </div>
     </footer>
