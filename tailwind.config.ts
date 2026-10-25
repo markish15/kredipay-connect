@@ -14,8 +14,8 @@ export default {
     },
     extend: {
       fontFamily: {
-        sans: ['"Century Gothic"', 'Jost', 'system-ui', 'sans-serif'],
-        heading: ['"Century Gothic"', 'Jost', 'system-ui', 'sans-serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        heading: ['Poppins', 'Inter', 'system-ui', 'sans-serif'],
       },
       colors: {
         /* KredibilityPay Brand Colors */
