@@ -28,7 +28,7 @@ const CoverageMap = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 max-w-4xl mx-auto mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12">
           {countries.map((country) => (
             <Card
               key={country.code}

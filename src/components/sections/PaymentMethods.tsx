@@ -19,7 +19,7 @@ const PaymentMethods = () => {
           </p>
         </div>
 
-        <div className="flex flex-wrap justify-center gap-6 max-w-4xl mx-auto">
+        <div className="flex flex-wrap justify-center gap-6 max-w-3xl mx-auto">
           {methods.map((method) => {
             const isSquare = ['Pago Fácil', '7-Eleven', 'Khipu', 'Banco Azteca'].includes(method);
             return (
