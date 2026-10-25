@@ -4,8 +4,7 @@ import { useTranslation } from 'react-i18next';
 const PaymentMethods = () => {
   const { t } = useTranslation();
   const methods = [
-    'Pix', 'SPEI', 'OXXO', 'Boleto', 'Banco Azteca', 'Banorte', 'Afirme',
-    'Rapipago', 'Pago Fácil', 'Khipu', '7-Eleven', 'Circle K', 'Servipag',
+    'Pix', 'SPEI', 'OXXO', 'Boleto', 'Pago Fácil', '7-Eleven', 'Servipag', 'Circle K',
   ];
 
   return (
