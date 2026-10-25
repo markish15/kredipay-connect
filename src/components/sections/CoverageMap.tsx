@@ -7,21 +7,12 @@ import { useTranslation } from 'react-i18next';
 const CoverageMap = () => {
   const { t } = useTranslation();
   const countries = [
-    { name: 'Brasil', code: 'br' },
     { name: 'México', code: 'mx' },
+    { name: 'Chile', code: 'cl' },
     { name: 'Colombia', code: 'co' },
     { name: 'Argentina', code: 'ar' },
-    { name: 'Chile', code: 'cl' },
-    { name: 'Perú', code: 'pe' },
-    { name: 'Ecuador', code: 'ec' },
+    { name: 'Brasil', code: 'br' },
     { name: 'Uruguay', code: 'uy' },
-    { name: 'Paraguay', code: 'py' },
-    { name: 'Bolivia', code: 'bo' },
-    { name: 'Costa Rica', code: 'cr' },
-    { name: 'Panamá', code: 'pa' },
-    { name: 'Guatemala', code: 'gt' },
-    { name: 'Rep. Dominicana', code: 'do' },
-    { name: 'El Salvador', code: 'sv' },
   ];
 
   return (
@@ -37,7 +28,7 @@ const CoverageMap = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 gap-4 max-w-4xl mx-auto mb-12">
+        <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 max-w-2xl mx-auto mb-12">
           {countries.map((country) => (
             <Card
               key={country.code}
