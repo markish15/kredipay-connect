@@ -6,6 +6,26 @@
 All colors MUST be HSL for proper theming.
 */
 
+/* Century Gothic is a licensed Monotype font that ships with Microsoft Office.
+   We point at the copy installed on the visitor's own device; where it is not
+   installed, the stack falls through to Jost, a free geometric webfont with the
+   same proportions (single-story 'a', circular 'o'). */
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Century Gothic'), local('CenturyGothic'), local('CenturyGothic-Regular');
+}
+
+@font-face {
+  font-family: 'Century Gothic';
+  font-style: normal;
+  font-weight: 600 800;
+  font-display: swap;
+  src: local('Century Gothic Bold'), local('CenturyGothic-Bold');
+}
+
 @layer base {
   :root {
     /* KredibilityPay Brand Colors */
