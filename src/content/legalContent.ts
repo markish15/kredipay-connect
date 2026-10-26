@@ -14,6 +14,7 @@ export type LegalDocument = {
 type LegalLocale = {
   terms: LegalDocument;
   privacy: LegalDocument;
+  company: LegalDocument;
 };
 
 export const legalContent: Record<'es' | 'en' | 'pt', LegalLocale> = {
@@ -162,6 +163,16 @@ export const legalContent: Record<'es' | 'en' | 'pt', LegalLocale> = {
         },
       ],
     },
+    company: {
+      eyebrow: 'Información legal',
+      title: 'Información corporativa',
+      updated: 'Última actualización: 26 de octubre de 2026',
+      sections: [
+        { title: '1. Datos de la sociedad', bullets: ['Denominación: KredibilityPay, S.A. de C.V.', 'Marca comercial: KredibilityPay', 'Forma jurídica: Sociedad Anónima de Capital Variable', 'País de constitución: Estados Unidos Mexicanos', 'RFC: KRE2601275P7', 'Sitio web: www.kredibilitypay.com'] },
+        { title: '2. Actividad', paragraphs: ['KredibilityPay es un proveedor mexicano de tecnología de pagos que ofrece a sus comercios acceso a métodos de pago locales mediante una API y un portal propios.'] },
+        { title: '3. Contacto', paragraphs: ['Para solicitudes de información corporativa o de cumplimiento, escribe a sales@kredibilitypay.com.'] },
+      ],
+    },
   },
   en: {
     terms: {
@@ -199,6 +210,16 @@ export const legalContent: Record<'es' | 'en' | 'pt', LegalLocale> = {
         { title: '11. Contact', paragraphs: ['For questions about this Notice or the processing of personal data, email sales@kredibilitypay.com.'] },
       ],
     },
+    company: {
+      eyebrow: 'Legal information',
+      title: 'Corporate information',
+      updated: 'Last updated: October 26, 2026',
+      sections: [
+        { title: '1. Company details', bullets: ['Legal name: KredibilityPay, S.A. de C.V.', 'Trade name: KredibilityPay', 'Legal form: Sociedad Anónima de Capital Variable (Mexican corporation)', 'Country of incorporation: United Mexican States', 'Tax ID (RFC): KRE2601275P7', 'Website: www.kredibilitypay.com'] },
+        { title: '2. Business activity', paragraphs: ['KredibilityPay is a Mexican payment technology provider that gives its merchants access to local payment methods through its own API and portal.'] },
+        { title: '3. Contact', paragraphs: ['For corporate or compliance information requests, email sales@kredibilitypay.com.'] },
+      ],
+    },
   },
   pt: {
     terms: {
@@ -234,6 +255,16 @@ export const legalContent: Record<'es' | 'en' | 'pt', LegalLocale> = {
         { title: '9. Cookies e tecnologias semelhantes', paragraphs: ['O Site não utiliza cookies nem tecnologias semelhantes para fins de análise, publicidade ou rastreamento.'] },
         { title: '10. Alterações do Aviso', paragraphs: ['A KredibilityPay poderá atualizar este Aviso para refletir alterações no Site, no tratamento de dados ou na legislação aplicável. A versão vigente estará disponível em www.kredibilitypay.com/aviso-de-privacidad e indicará a data de sua última atualização.'] },
         { title: '11. Contato', paragraphs: ['Para perguntas sobre este Aviso ou sobre o tratamento de dados pessoais, escreva para sales@kredibilitypay.com.'] },
+      ],
+    },
+    company: {
+      eyebrow: 'Informação legal',
+      title: 'Informações corporativas',
+      updated: 'Última atualização: 26 de outubro de 2026',
+      sections: [
+        { title: '1. Dados da sociedade', bullets: ['Denominação: KredibilityPay, S.A. de C.V.', 'Nome comercial: KredibilityPay', 'Forma jurídica: Sociedad Anónima de Capital Variable (sociedade anônima mexicana)', 'País de constituição: Estados Unidos Mexicanos', 'RFC (identificação fiscal): KRE2601275P7', 'Site: www.kredibilitypay.com'] },
+        { title: '2. Atividade', paragraphs: ['A KredibilityPay é uma provedora mexicana de tecnologia de pagamentos que oferece aos seus comércios acesso a métodos de pagamento locais por meio de API e portal próprios.'] },
+        { title: '3. Contato', paragraphs: ['Para solicitações de informações corporativas ou de conformidade, escreva para sales@kredibilitypay.com.'] },
       ],
     },
   },

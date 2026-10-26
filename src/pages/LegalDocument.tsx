@@ -5,7 +5,7 @@ import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
 type LegalDocumentProps = {
-  document: 'terms' | 'privacy';
+  document: 'terms' | 'privacy' | 'company';
 };
 
 const LegalDocument = ({ document }: LegalDocumentProps) => {

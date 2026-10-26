@@ -66,6 +66,9 @@ const Footer = () => {
           <Link to="/aviso-de-privacidad" className="transition-colors hover:text-primary">
             {t('footer.privacy')}
           </Link>
+          <Link to="/informacion-corporativa" className="transition-colors hover:text-primary">
+            {t('footer.company')}
+          </Link>
         </div>
       </div>
     </footer>
